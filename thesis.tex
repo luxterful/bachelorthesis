@@ -17,7 +17,7 @@
 \usepackage{subfigure}
 \usepackage{pdfpages}
 \usepackage[verbose]{placeins}
-\usepackage[nouppercase,headsepline,plainfootsepline]{scrpage2}
+\usepackage[markcase=ignoreuppercase,headsepline,plainfootsepline]{scrlayer-scrpage}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{color}
@@ -211,58 +211,105 @@ TODO
 %%%%%%%%%%%%%%%%%%%
 \mainmatter
 
-\chapter{Einführung}\label{ch:intro}
+\chapter{Einführung}
+In Zeiten wie der Corona Krise wird deutlich wie wichtig es ist als Musik Künstler online gut aufgestellt zu sein
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula felis lectus, nec aliquet arcu aliquam vitae. Quisque laoreet consequat ante, eget pretium quam hendrerit at. Pellentesque nec purus eget erat mattis varius. Nullam ut vulputate velit. Suspendisse in dui in eros iaculis tempus. Phasellus vel est arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer elementum, nulla eu faucibus dignissim, orci justo imperdiet lorem, luctus consectetur orci orci a nunc.
 
-Praesent at nunc nec tortor viverra viverra. Morbi in feugiat lectus. Vestibulum iaculis ipsum at eros viverra volutpat in id ipsum. Donec condimentum, ligula viverra pharetra tincidunt, nunc dui malesuada nisi, vitae mollis lacus massa quis velit. Integer feugiat ipsum a volutpat scelerisque. Nulla facilisis augue nunc. Curabitur eget consectetur nulla. Integer accumsan sem non nisi tristique dictum.
+Heutzutage haben wir eine Vielzahl an online Video Content. Netflix, Amazon Prime, YouTube, Hulu und so weiter.
 
-Sed lacinia eu dolor sed congue. Ut dui orci, venenatis id interdum rhoncus, mattis elementum massa. Proin venenatis elementum purus ut rutrum. Phasellus sit amet enim porta, commodo mauris a, bibendum tortor. Nulla ut lobortis justo. Aenean auctor mi nec velit fermentum, quis ultricies odio viverra. Maecenas ultrices urna vel erat ornare, quis suscipit odio molestie. Donec vel dapibus orci, vel tincidunt orci.
+Werbung ist heutzutage im Internet allgegenwärtig. Sie wird immer moderner und raffinierter. Jedoch gewöhnen sich die Menschen recht schnell an neue Werbetechniken. Zudem sind durch die konstante technologische Entwicklung auch die Ansprüche der Menschen gestiegen. Neben den Produkten steigt auch der Anspruch an die Werbung. Um diesem Anspruch gerecht zu werden, hat sich eine ganze Branche um die Vermarktung von Produkten entwickelt. Die Online-Marketing Welt umfasst viele verschiedene Bereiche.
 
-Etiam vitae eros erat. Praesent nec accumsan turpis, et mollis eros. Praesent lacinia nulla at neque porta aliquam. Quisque elementum neque ac porta suscipit. Nulla volutpat luctus venenatis. Aliquam imperdiet suscipit pretium. Nunc feugiat lacinia aliquet. Mauris ut sapien nec risus porttitor bibendum. Aenean feugiat bibendum lectus, id mattis elit adipiscing at. Pellentesque interdum felis non risus iaculis euismod fermentum nec urna. Nullam lacinia suscipit erat ac ullamcorper. Sed vitae nulla posuere, posuere sem id, ultricies urna. Maecenas eros lorem, tempus non nulla vitae, ullamcorper egestas nibh. Vestibulum facilisis ante vel purus accumsan mattis. Donec molestie tempor eros, a gravida odio congue posuere.
+Unternehmen in der Musikbranche (Musikinstrumente, Technik, Clubs, Veranstalter und Künstler) nutzen beispielsweise mehr und mehr Social Media Plattformen um ihre Produkte und Dienstleistungen an den Konsumenten zu bringen. Hierdurch kann mit geringerem analogen Aufwand, die Kraft der digitalen Werbung effektiv genutzt wird.
 
-Sed in tempus elit, sit amet suscipit quam. Ut suscipit dictum molestie. Etiam quis porta mauris. Cras dapibus sapien eget sem porta, ut congue sapien accumsan. Maecenas hendrerit lobortis mauris ut hendrerit. Suspendisse at aliquet est. Quisque eros est, scelerisque ac orci quis, placerat suscipit lorem. Phasellus rutrum enim non odio ullamcorper, sit amet auctor nulla fringilla. Nunc eleifend vulputate dui, a sollicitudin tellus venenatis non. Cras condimentum lorem at ultricies vestibulum. Vestibulum interdum lobortis commodo. Nullam rhoncus interdum massa, ut varius nisi scelerisque id. Nunc interdum quam in enim bibendum vulputate.
+Allerdings geht dieser Prozess nur schleppend voran und viel Potential wird nicht genutzt. Es fehlt eine Marketingstrategie die empirisch belegbar einen stärkeren Umsatzanstieg ermöglicht.
 
-\cite{gamma2011patterns}
+-----
+
+Hier kommt Gamification ins Spiel. Durch Gamification werden die Betrachtenden “direkter” angesprochen. Sie interagieren mit der Werbung wodurch eine Immersion erzeugt werden kann. Eine Social Media Plattform welche Gamification bereits erfolgreich einsetzt ist die soziale Live-Streaming Plattform Twitch. Jedoch noch nicht aktiv für Marketing.
+
+In dieser Arbeit soll daher folgende Frage analysiert werden: Wie können die Gamification Elemente der Plattform Twitch von Firmen in der Musikbranche für Marketingzwecke eingesetzt werden?
+
+Twitch hat eine sehr gut dokumentierte API mit welcher es möglich ist auch Erweiterungen und Apps zu schreiben die auf Gamification Events von Twitch reagieren und diese beeinflussen können.
+
+-----
+
+1. Recherche über Marketing in Twitch: Welche Marketingmethoden werden in Twitch eingesetzt und wie erfolgreich sind sie
+2. Was ist Gamification, welche Elemente gibt es und welche werden in Twitch eingesetzt bzw stellt die API zur Verfügung
+3. Entwurf eines Konzepts zum marketing mit gamification in Twitch
+4. Prototypische Implementierung
+5. Evaluation
+
+-----
+
+Da Gamification als Werkzeug dient, die Motivation und das Interesse zu fördern, kann auch Werbung davon profitieren. Im Fokus dieser Bachelorarbeit stehen Unternehmen in der Musikbranche, welche mithilfe der Gamification die Betrachter auf emotionaler Ebene erreichen sollen. Dies hat den Vorteil dass dem Kunden oft gar nicht bewusst ist, dass es sich hierbei um Werbung handelt.
+
+Seit 2011 gibt es auch Twitch.
+
+In dieser Arbeit soll überprüft werden ob die Gamification Elemente der Platform Twitch auch als Marketing Instrumente gebraucht werden können.
 
 \chapter{Grundlagen}
+
+Twitch
+
+Gamification
+
+Online Marketing
+
+\chapter{Gamification auf Twitch}
+
+Subscribtions aufgeteilt in drei "Tiers". Drei Stufen mit den Preisen 4.99, 9.99 und 24.99
+
+Vorteile: 
+
+\begin{itemize}
+\item Werbefrei schauen
+\item Badge im Chat 
+\begin{itemize}
+\item recuring bekommen coolere badges
+\item höhere tiers bekommen zusätzlichen flair
+\end{itemize}
+\item emotes
+\end{itemize}
+
+
+Channelpoints
+- Vorgefertigte
+  - Nachricht hervorheben
+  - Unlock zufälliges Sub emote
+  - Nachricht im Sub Only mode
+  - Unlock spezifisches Sub emotes
+  - ein emote bearbeiten
+
+Channelpoints verdienen
+- Watch for 5 minutes +10
+- Claim special bonuses +50
+- Participate in a Raid +250
+- Follow this channel +300
+- Monthly 1st Cheer +350
+- Monthly 1st Gift a Sub +500
+- Grow a watch streak up to +450
+- Tier 1 sub 1.2x multiplier
+- Tier 2 sub 1.4x multiplier
+- Tier 3 sub 2x multiplier
+
+\chapter{Marketing auf Twitch}
+
+Influencer Marketing mit Product Placements
+
+pre-roll, mid-roll, and post-roll ads
+
+Branded Content (Original Content)
+- "Old Spice" livestream in dem der Chat entscheiden konnte was der Protagonist tun soll
 
 \chapter{Problemstellung}
 
 \chapter{Lösung}
-
-\begin{lstlisting}[label=lst:java,
-				   language=java,
-				   firstnumber=1,
-				   caption=Beispiel für einen Quelltext]
-
-public void foo() {
-	// Kommentar
-}
-\end{lstlisting}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula felis lectus, nec aliquet arcu aliquam vitae. Quisque laoreet consequat ante, eget pretium quam hendrerit at. Pellentesque nec purus eget erat mattis varius. Nullam ut vulputate velit. Suspendisse in dui in eros iaculis tempus. Phasellus vel est arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer elementum, nulla eu faucibus dignissim, orci justo imperdiet lorem, luctus consectetur orci orci a nunc.
-
-Praesent at nunc nec tortor viverra viverra. Morbi in feugiat lectus. Vestibulum iaculis ipsum at eros viverra volutpat in id ipsum. Donec condimentum, ligula viverra pharetra tincidunt, nunc dui malesuada nisi, vitae mollis lacus massa quis velit. Integer feugiat ipsum a volutpat scelerisque. Nulla facilisis augue nunc. Curabitur eget consectetur nulla. Integer accumsan sem non nisi tristique dictum.
-
-Sed lacinia eu dolor sed congue. Ut dui orci, venenatis id interdum rhoncus, mattis elementum massa. Proin venenatis elementum purus ut rutrum. Phasellus sit amet enim porta, commodo mauris a, bibendum tortor. Nulla ut lobortis justo. Aenean auctor mi nec velit fermentum, quis ultricies odio viverra. Maecenas ultrices urna vel erat ornare, quis suscipit odio molestie. Donec vel dapibus orci, vel tincidunt orci.
-
-Etiam vitae eros erat. Praesent nec accumsan turpis, et mollis eros. Praesent lacinia nulla at neque porta aliquam. Quisque elementum neque ac porta suscipit. Nulla volutpat luctus venenatis. Aliquam imperdiet suscipit pretium. Nunc feugiat lacinia aliquet. Mauris ut sapien nec risus porttitor bibendum. Aenean feugiat bibendum lectus, id mattis elit adipiscing at. Pellentesque interdum felis non risus iaculis euismod fermentum nec urna. Nullam lacinia suscipit erat ac ullamcorper. Sed vitae nulla posuere, posuere sem id, ultricies urna. Maecenas eros lorem, tempus non nulla vitae, ullamcorper egestas nibh. Vestibulum facilisis ante vel purus accumsan mattis. Donec molestie tempor eros, a gravida odio congue posuere.
-
-Sed in tempus elit, sit amet suscipit quam. Ut suscipit dictum molestie. Etiam quis porta mauris. Cras dapibus sapien eget sem porta, ut congue sapien accumsan. Maecenas hendrerit lobortis mauris ut hendrerit. Suspendisse at aliquet est. Quisque eros est, scelerisque ac orci quis, placerat suscipit lorem. Phasellus rutrum enim non odio ullamcorper, sit amet auctor nulla fringilla. Nunc eleifend vulputate dui, a sollicitudin tellus venenatis non. Cras condimentum lorem at ultricies vestibulum. Vestibulum interdum lobortis commodo. Nullam rhoncus interdum massa, ut varius nisi scelerisque id. Nunc interdum quam in enim bibendum vulputate.
+Twitch API
 
 
+\cite{gamma2011patterns}
 \chapter{Evaluierung}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula felis lectus, nec aliquet arcu aliquam vitae. Quisque laoreet consequat ante, eget pretium quam hendrerit at. Pellentesque nec purus eget erat mattis varius. Nullam ut vulputate velit. Suspendisse in dui in eros iaculis tempus. Phasellus vel est arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer elementum, nulla eu faucibus dignissim, orci justo imperdiet lorem, luctus consectetur orci orci a nunc.
-
-Praesent at nunc nec tortor viverra viverra. Morbi in feugiat lectus. Vestibulum iaculis ipsum at eros viverra volutpat in id ipsum. Donec condimentum, ligula viverra pharetra tincidunt, nunc dui malesuada nisi, vitae mollis lacus massa quis velit. Integer feugiat ipsum a volutpat scelerisque. Nulla facilisis augue nunc. Curabitur eget consectetur nulla. Integer accumsan sem non nisi tristique dictum.
-
-Sed lacinia eu dolor sed congue. Ut dui orci, venenatis id interdum rhoncus, mattis elementum massa. Proin venenatis elementum purus ut rutrum. Phasellus sit amet enim porta, commodo mauris a, bibendum tortor. Nulla ut lobortis justo. Aenean auctor mi nec velit fermentum, quis ultricies odio viverra. Maecenas ultrices urna vel erat ornare, quis suscipit odio molestie. Donec vel dapibus orci, vel tincidunt orci.
-
-Etiam vitae eros erat. Praesent nec accumsan turpis, et mollis eros. Praesent lacinia nulla at neque porta aliquam. Quisque elementum neque ac porta suscipit. Nulla volutpat luctus venenatis. Aliquam imperdiet suscipit pretium. Nunc feugiat lacinia aliquet. Mauris ut sapien nec risus porttitor bibendum. Aenean feugiat bibendum lectus, id mattis elit adipiscing at. Pellentesque interdum felis non risus iaculis euismod fermentum nec urna. Nullam lacinia suscipit erat ac ullamcorper. Sed vitae nulla posuere, posuere sem id, ultricies urna. Maecenas eros lorem, tempus non nulla vitae, ullamcorper egestas nibh. Vestibulum facilisis ante vel purus accumsan mattis. Donec molestie tempor eros, a gravida odio congue posuere.
-
-Sed in tempus elit, sit amet suscipit quam. Ut suscipit dictum molestie. Etiam quis porta mauris. Cras dapibus sapien eget sem porta, ut congue sapien accumsan. Maecenas hendrerit lobortis mauris ut hendrerit. Suspendisse at aliquet est. Quisque eros est, scelerisque ac orci quis, placerat suscipit lorem. Phasellus rutrum enim non odio ullamcorper, sit amet auctor nulla fringilla. Nunc eleifend vulputate dui, a sollicitudin tellus venenatis non. Cras condimentum lorem at ultricies vestibulum. Vestibulum interdum lobortis commodo. Nullam rhoncus interdum massa, ut varius nisi scelerisque id. Nunc interdum quam in enim bibendum vulputate.
 
 \chapter{Zusammenfassung}
 

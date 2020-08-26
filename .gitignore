@@ -44,3 +44,7 @@
 *.mtc0
 *.pyg
 *.nlo
+
+### Custom
+__*
+*.pdf

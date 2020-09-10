@@ -23,7 +23,7 @@ FILEBPDF    = $(FILE)-withauthorname.pdf
 #################################################################################
 ## programs etc.
 #################################################################################
-PDFLATEX    = pdflatex
+PDFLATEX    = pdflatex --shell-escape
 PDFAOPT      = "\input{$(TEXSRC)}"
 PDFBOPT      = "\def\iswithfullname{1} \input{$(TEXSRC)}"
 BIBTEX      = biber

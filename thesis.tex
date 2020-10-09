@@ -29,6 +29,10 @@
 \usepackage{booktabs}
 \usepackage[style=apa,backend=biber]{biblatex}
 \usepackage{subfiles}
+\usepackage{booktabs, multirow} % for borders and merged ranges
+\usepackage{soul}% for underlines
+%\usepackage[table]{xcolor} % for cell colors
+\usepackage{changepage,threeparttable} % for wide tables
 \bibliography{referencesmendsync}
  
 %%%%%%%%%%%%%%%%%%%
@@ -183,7 +187,7 @@ TODO
 \newpage
 \chapter*{Danksagung}
 
-Ich Danke allen die mich bei dieser Arbeit unterstütz haben.
+Ich Danke allen die mich bei dieser Arbeit unterstützt haben.
 
 \tableofcontents
 
@@ -199,33 +203,35 @@ Ich Danke allen die mich bei dieser Arbeit unterstütz haben.
 %
 %
 % ###################################################################### Einleitung
-\chapter{Einleitung}
-
+\chapter{Einleitung 3}
 \section{Ausgangssituation und Problemstellung}
+Werbung ist heutzutage im Internet allgegenwärtig. Sie wird immer moderner und raffinierter. In den frühen 90ern als die Marketingbranche so richtig begonnen hat zu flukturieren, waren besonders sachliche Werbungen welche die Besonderheiten eines Produktes herausgestellt haben erfolgreich. Je weiter die Zeit vorrangeschritten ist entwickelte sich die Art und Weise mehr von Push zu Pull. Hierbei geht es darum, dass der Verkäufer nicht in erster Linie den Käufer von einem Produkt überzeugen will. Vielmehr geht es darum dem Kunden mit dem Produkt ein gutes Gefühl zu vermitteln um ihn dazu zu bringen es zu wollen. Die Werbebotschaften werden hier viel subtiler und unterschwelliger vermittelt. \parencite{Kopp2013} 
 
-Heutzutage haben wir eine Vielzahl an online Video Content. Netflix, Amazon Prime, YouTube, Hulu und so weiter.
+Diese subtile Art der Werbung entwickelte sich besonders rasant mit dem populär werden des Internets. Vor allem im Zuge von Social Media wurde  Content Marketing, Influencer Marketing und Product Placements sehr populär.
 
-Werbung ist heutzutage im Internet allgegenwärtig. Sie wird immer moderner und raffinierter. Jedoch gewöhnen sich die Menschen recht schnell an neue Werbetechniken. Zudem sind durch die konstante technologische Entwicklung auch die Ansprüche der Menschen gestiegen. Neben den Produkten steigt auch der Anspruch an die Werbung. Um diesem Anspruch gerecht zu werden, hat sich eine ganze Branche um die Vermarktung von Produkten entwickelt. Die Online-Marketing Welt umfasst viele verschiedene Bereiche.
+Auch Unternehmen in der Musikbranche nutzen mehr und mehr Social Media Plattformen um ihre Produkte und Dienstleistungen an den Konsumenten zu bringen. Hierdurch kann mit geringerem analogen Aufwand, die Kraft der digitalen Werbung effektiv genutzt wird.
 
-Unternehmen in der Musikbranche (Musikinstrumente, Technik, Clubs, Veranstalter und Künstler) nutzen beispielsweise mehr und mehr Social Media Plattformen um ihre Produkte und Dienstleistungen an den Konsumenten zu bringen. Hierdurch kann mit geringerem analogen Aufwand, die Kraft der digitalen Werbung effektiv genutzt wird.
+Gerade die Corona Pandemie im Jahr 2020 hat gezeigt, wie wichtig es ist als Unternehmen in der Musik und Veranstaltungsbranche online gut aufgestellt zu sein. Da keine Veranstaltungen stattfinden dürfen bricht somit 50\% des Umsatzes einfach weg. Ganz besonders die Verkaufszahlen von Tickets für Live Präsenz Veranstaltungen sind hiervon stark betroffen. \parencite{Stefan2020} % ausbauen, welche bereiche sind nicht betroffen
 
-Besonders in Zeiten von Pandemien wie der Corona Krise im Jahr 2020 wird deutlich wie wichtig es ist als Unternehmen in der Musik und Veranstaltungsbranche online gut aufgestellt zu sein. Da keine Veranstaltungen stattfinden dürfen bricht somit 50\% des Umsatzes für Ticketverkäufe größtenteils weg. \parencite{Stefan2020}
+\begin{figure}[ht]
+\caption{Twitch durchschnittliche gleichzeitige Zuschauer Q2'18 bis Q2'20}
+\caption*{Quelle: https://blog.streamlabs.com/streamlabs-stream-hatchet-q2-2020-live-streaming-industry-report-44298e0d15bc}
+\centering
+\includegraphics[width=0.8\textwidth]{twitch_viewers_2020}
+\end{figure}
 
-Allerdings geht dieser Prozess nur schleppend voran und viel Potential wird nicht genutzt. Es fehlt eine Marketingstrategie die empirisch belegbar einen Erfolg bringt.
-
-Mit 814 Mio. Stunden Live-Content gestreamt ist Twitch gegenüber YouTube auf welcher nur 226 Mio. Stunden Live-Content gestreamt wurde ein echter Geheimtipp für Marketer \cite{Sturm2019}
+Heutzutage haben wir eine Vielzahl an online Video Content. Netflix, Amazon Prime, YouTube, Hulu und so weiter. Mit 814 Mio. Stunden Live-Content gestreamt ist Twitch gegenüber YouTube auf welcher nur 226 Mio. Stunden Live-Content gestreamt wurde ein echter Geheimtipp für Marketer \parencite{Sturm2019}
 
 \section{Forschungsziel und -methode}
 
-Hier kommt Gamification ins Spiel. Durch Gamification werden die Betrachtenden “direkter” angesprochen. Sie interagieren mit der Werbung wodurch eine Immersion erzeugt werden kann. Eine Social Media Plattform welche Gamification bereits erfolgreich einsetzt ist die soziale Live-Streaming Plattform Twitch. Jedoch noch nicht aktiv für Marketing.
+Allerdings geht dieser Prozess nur schleppend voran und viel Potential wird nicht genügend genutzt. Es fehlt eine Marketingstrategie die empirisch belegbar einen Erfolg bringt. Hier kommt Gamification ins Spiel. Durch Gamification werden die Betrachter emotional angesprochen. Sie interagieren mit der Werbung wodurch eine Immersion %immersion erklären 
+erzeugt werden kann. Eine Social Media Plattform welche Gamification bereits erfolgreich einsetzt ist die oben erwähnte soziale Live-Streaming Plattform Twitch. Jedoch noch nicht aktiv für Marketing.
 
-In dieser Arbeit soll daher folgende Frage analysiert werden: Wie können die Gamification Elemente der Plattform Twitch von Firmen in der Musikbranche für Marketingzwecke eingesetzt werden?
+In Gamification birgt sich viel Potential da der Benutzer Spaß dabei hat mit der Werbung zu interagieren. In dieser Arbeit soll daher folgende Frage analysiert werden: Wie können die Gamification Elemente der Plattform Twitch von Firmen in der Musikbranche für Marketingzwecke eingesetzt werden?
 
-Twitch hat eine sehr gut dokumentierte API mit welcher es möglich ist auch Erweiterungen und Apps zu schreiben die auf Gamification Events von Twitch reagieren und diese beeinflussen können.
+Twitch hat eine sehr gut dokumentierte Programmierschnittstelle (API) mit welcher es möglich ist auch Erweiterungen und Apps zu schreiben die auf Gamification Events von Twitch reagieren und diese beeinflussen können.
 
 Da Gamification als Werkzeug dient, die Motivation und das Interesse zu fördern, kann auch Werbung davon profitieren. Im Fokus dieser Bachelorarbeit stehen Unternehmen in der Musikbranche, welche mithilfe der Gamification die Betrachter auf emotionaler Ebene erreichen sollen. Dies hat den Vorteil dass dem Kunden oft gar nicht bewusst ist, dass es sich hierbei um Werbung handelt.
-
-Seit 2011 gibt es auch Twitch.
 
 \section{Aufbau der Arbeit}
 
@@ -250,35 +256,120 @@ Um am Ende meinen Prototypen zu evaluieren wurde mit den Experten vom Anfang noc
 %
 %
 %
-% ###################################################################### Twitch
-\chapter{Twitch}
-\section{Übersicht}
+% 
+\chapter{Grundlagen}
+\section{Twitch}
 
-Twitch ist eine Web Video Plattform welche von Amazon betrieben wird. Sie wird besonders zum Streamen von Videspielen eingesetzt. Sie wird täglich von X Zuschauern besucht welche Y Streamer zuschauen. Sie war zum Start der Platform noch unter dem namen Justin.tv bekannt. Aufgrund der hohen Anfrage von Videospiel Content auf dieser Seite wurde eine zweite Seite dediziert für Videospiele mit dem heute bekannten Namen Twitch gestartet welche im Jahr 2011 ans Netz ging. Später wurde auch der Name der Firma in Twitch umbenannt. Im JAhr 2014 wurde Twitch von Amazon gekauft und ist seitdem der Betreiber.
+\begin{figure}[ht]
+\caption{Twitch Layout}
+\centering
+\includegraphics[width=\textwidth]{eskei_screen}
+\end{figure}
 
+Twitch ist eine Web Video Plattform welche von Amazon betrieben wird. Sie wird besonders zum Streamen von Videospielen eingesetzt. Sie verzeichnet tägliche Zuschauer Zahlen von XXXXXXX. Die konsumierten Inhalte liefern YYYYYY Streamer.
 
-Jeder Stream wird einer Kategorie zugeordnet. Die beliebtesten Kategorie auf Twitch sind
--
--
--
+Sie war zum Start der Plattform noch unter dem Namen Justin.tv bekannt. Aufgrund der hohen Anfrage von Videospiel Content auf dieser Seite wurde eine zweite Seite dediziert für Videospiele mit dem heute bekannten Namen Twitch gestartet welche im Jahr 2011 ans Netz ging. Später wurde auch der Name der Firma in Twitch umbenannt. Im Jahr 2014 wurde Twitch von Amazon gekauft und ist seitdem der Betreiber.
 
-Neben Videosielen werde auch viele andere Kategorien gestreamt
+Die Plattform ist für beide Seiten komplett kostenlos. Sowohl Zuschauer Seite als auch die Seite des Streamers.
+
+Jeder Stream wird einer Kategorie zugeordnet wobei eine Kategorie in der Regel ein Video Spiel ist. Die beliebtesten Spiele aller Zeiten auf Twitch  laut Statista können der nachstehenden Tabelle entnommen werden. \parencite{Statista2020}
+
+\begin{table}[!htp]\centering
+\caption{Statista 2020}\label{tabStat: }
+\scriptsize
+\begin{tabular}{lrr}\toprule
+\multicolumn{2}{c}{\textbf{Twitch most popular games by all time viewers 2020}} \\\midrule
+\multicolumn{2}{c}{Most popular games on Twitch worldwide as of September 2020, by all time views (in billions)} \\
+& \\
+League of Legends &33,26 \\
+Fortnite &19,33 \\
+Counter-Strike: Global Offensive &15,1 \\
+DOTA 2 &14,4 \\
+Hearthstone &11,2 \\
+Grand Theft Auto V &9,02 \\
+World of Warcraft &7,46 \\
+Overwatch &6,78 \\
+Minecraft &4,16 \\
+Tom Clancy's Rainbow Six: Siege &2,67 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Neben Videospielen werde auch viele andere Kategorien gestreamt
 Just Chatting
 Kochen
 Musik
 
-Monetarisiert 
-Subs
-Bits
-Direkte Spenden
+Um mit Twitch auch Geld verdienen zu können müssen Streamer den sogenannten Affiliate oder Partner Status erreichen. Diese Stati ermöglichen dem Streamer die sogenannten Subscribtions (dt. Abonements) und Bits zu aktivieren. 
 
-\section{Marketing auf Twitch}
+Zweiteres ist eine digitale Währung der Platform die für Echtgeld erworben werden kann. 
+- 100 Bits für 1.47€
+- 500 Bits für 7.36€
+- ... %TODO
+
+Ein Bit entspricht einem US Cent.
+
+Hier gibt es zum einen die Subscribtions welche aufgeteilt in drei "Tiers". Drei Stufen mit den Preisen 4.99, 9.99 und 24.99.
+
+Vorteile:
+Werbefrei schauen
+Community Gefühl!!!!!
+emotes
+Badge im Chat
+recuring bekommen coolere badges
+höhere tiers bekommen zusätzlichen flair
+
+\section{Gamification}
+Gamification ist ein Begriff der bereits seit einigen Jahren in vielen Bereichen Anwendung findet. Nachdem lange Verwirrung um eine genaue Definition von Gamification bestand definierte \textcite{Deterding2011} es wie folgt: "Gamification is the use of game design elements in non-game contexts"  
+
+Somit ist Gamification die Anwendung von Elementen aus Spielen in nicht-spiel Umgebungen beziehungsweise Kontexten. Aufgrund des hohen Erfolges von Spielen wurde begonnen zu analysieren welche Elemente in Spielen ganz besonders einen Spieler motivieren.
+
+Die Hintergründe des ganzen sind dass Spiele eine Starke Motivation im Benutzer bzw Spieler erzeugen. Diese Motivation wird spezifischen Elementen aus Spielen zugeschrieben. Diese sind im Allgemeinen Punkte, Badges oder Leaderboards im folgenden auch kurz "PBL" genannte
+
+Jedoch besteht auch die Verwirrung dass angenommen wird dass das alleinige hinzufügen dieser Elemente bereits Gamification ist. Jedoch ist Gamification viel mehr. Es ist das gezielte ansprechen von Motivationsfaktoren in der menschlichen Psyche
+
+Pointification ist das reine Anwenden von PBLs auf ein System ohne durchdachtes System, in der Hoffnung, dass es den Benutzer motiviert.
+
+Das Octalysis Framework von YouKaiChou welches die Motivation des Menschen in 8 Teilbereiche unterteilt. Daher auch “Octal”-ysis. In diesem Framework haben wir das Octalysis Strategy Dashboads. Dieses wird dazu eingezetzt ganz spezifisch herauszufinden welche Gamification Elemente eingesetzt werden um vordefinierstes Verhalten auszulösen.
+
+Spielertypen nach Andrzej Marczewski besteht aus 6 verschiedenen Arten von Usern. Jedoch kann man einen Menschen nicht direkt einem Typen zuordnen. Vielmehr hat jeder Mensch auch jeden Typen in sich aber unterschiedlich ausgeprägt.
+
+Die Typen nach  Marczewski sind die folgenden:
+
+\textbf{Socialisers} sind motiviert durch die Interaktion und Beziehung zu anderen Usern. Sie wollen mit anderen Interagieren und zu diesen auch soziale Verbindungen aufbauen. Sie wollen andere Menschen um sich herum haben, daher sind diese besonders in sozialen Netzwerken anzutreffen.
+
+- Free Spirits are motivated by Autonomy and self-expression. They want to create and explore.
+
+- Achievers are motivated by Mastery. They are looking to learn new things and improve themselves. They want challenges to overcome.
+
+- Philanthropists are motivated by Purpose and Meaning. This group are altruistic, wanting to give to other people and enrich the lives of others in some way with no expectation of reward.
+
+- Players are motivated by Rewards. They will do what is needed of them to collect rewards from a system. They are in it for themselves.
+
+- Disruptors are motivated by Change. In general, they want to disrupt your system, either directly or through other users to force positive or negative change.
+
+Jedem dieser Spielertypen können spezifische 
+
+\section{Online Marketing}
+% TODO
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% 
+\chapter{Marketing auf Twitch}
 
 Auf Twitch werden verschiedene Formen des Online Marketings angewandt. Im folgenden werden die verschiedenen Formen anhand von Beispielen erklärt.
 
-Dass Twitch eine lukrative Platform ist merkte auch Amazon worufhin diese Twitch kauften.
 
-\subsection{Video Marketing}
+\section{Video Marketing}
 Das Video Marketing sind die altbekannten Werbespots welche auch in älteren Medien wie dem Fernseher zum einsatz kommen.
 
 Auf Twitch wird diese Form im Videofeed des Streams eingesetzt. Hier werden Werbeclips zu verschiedenen Zeiten des Streams eingeblendet. Klickt ein Besucher auf einen Live Kanale wird noch bevor der Video Feed des Streamers gestartet wird ein Werbeclip eingeblendet.
@@ -290,7 +381,7 @@ Hierbei handelt es sich um klassische Werbe Videos wie sie auch im Fernsehen zu 
 
 Jedoch werden die Ads nicht angezeigt falls man einen Ad Blocker im Browser benutzt. Ist man Subscriber einer Channels oder hat für Twitch Turbo bezahlt werden die Werbeclips auch übersprungen.
 
-\subsection{Display Marketing}
+\section{Display Marketing}
 Eine der ältesten Marketing Methoden im digitalen Bereich ist vermutlich das Display Marketing. Hierbei werden auf einer Webseite verschiedene Banner eingeblendet die über Produkte oder Firmen informieren. Hierzu zählen auch Popups.
 
 Oft werden diese auch zwischen normalen Content einer Webseite angezeigt um in der großen Konzentration eines Betrachters dessen Aufmerksamkeit auf ein Produkt zu lenken.
@@ -298,21 +389,21 @@ Oft werden diese auch zwischen normalen Content einer Webseite angezeigt um in d
 Banner Werbung
 Firmen können auf Twitch Banner Werbung schalten. Diese wird in verschiedenen Bereichen der Platform angezeigt. 
 
-\subsection{Content Marketing}
+\section{Content Marketing}
 Bei Content Marketing geht es darum relevanten Content zu produzieren welcher die Aufgabe hat den Kunden zu informieren und die Marke in einem besonders guten Licht dastehen zu lassen.
 
 Branded Content (Original Content)
 - "Old Spice" livestream in dem der Chat entscheiden konnte was der Protagonist tun soll
 - Duracel
 
-\subsection{Affiliate marketing}
+\section{Affiliate marketing}
 Affiliate Marketing ist ein provisionsbasierter Anzatz um ein Produkt direkt an den Mann zu bringen. Hierbei werden können sich Content ersteller sogenannte Affiliate Links generieren welche direkt auf die Kaufsseite eines Produktes verweisen. Diesem Link ist ein Flag mitgegeben welches auf den Linkersteller zurückführt. Der Link wird in der Regel bei Produktreviews, Inventarlisten oder in Artikeln über die bestimmte Produktkategorie als Empfehlung eingesetzt.
 
 Klickt ein Kunde nun auf einen solchen Link gelangt er direkt auf die Kaufsseite des Produktes. Kauft der Kunde sich dieses Produkt so zahlt der Verkäuft eine Provision an den Linkersteller aus. 
 
 Manche Plattformen wie Amazon vergüten auch die reine referenzierung auf ihre Platform. Hat ein Kunde auf einen Affiliate Link geklickt und befindet sich auf der Produktseite, kauft jedoch das verlinkte Produkt nicht, sondern ein anderes auf der Platform so bekommt der Verlinker dennoch eine Provieion für die Weiterleitung auf die Platform.
 
-\subsection{Influencer marketing}
+\section{Influencer marketing}
 Product Placements
 
 Zum Start von Alien: Convenant im Jahr 2017 führte 20th Century Fox eine Kampagne auf Twitch durch. Diese sollte eine junge Zielgruppe für den neuen Teil der beliebten Filmreihe erreichen. Da der letzte Film der Reihe bereits im Jahr 1997
@@ -329,108 +420,90 @@ Twitch mit einer Kampagne, die eine junge Zielgruppe für das Prequel der Kultfi
 %
 %
 %
-% ###################################################################### Gamification
-\chapter{Gamification}
+% 
+\chapter{Gamification auf Twitch}
 
-\section{Grundlagen}
-Gamification ist ein Begriff der bereits seit einigen Jahren in vielen Bereichen Anwendung findet. Nachdem lange Verwirrung um eine genaue Definition vom Gamification bestand definierte \textcite{Deterding2011} es wie folgt: "Gamification is the use of game design elements in non-game contexts"  
+Da Twitch eine Plattform ist welche ursprünglich nur für das Live Streamen von Videospielen gebaut wurde ist es nicht verwunderlich dass diese auch aktiv sehr viel Gamification in ihrer Software  einsetzen. Sowohl die Seite der Zuschauer als auch die Streamer Seite ist mit Elementen aus Spielen übersäht. Zunächst wird die Seite des Streamers beleuchtet. Dieser wird motiviert weiter zu Streamen um neuen Content für Twitch zu produzieren.
 
-Somit ist Gamification die Anwendung von Elementen aus Spielen in nicht-spiel Umgebungen beziehungsweise Kontexten. Aufgrund des hohen Erfolges von Spielen wurde begonnen zu analysieren welche Elemente in Spielen ganz besonders
+\section{Streamer Seite}
+Der Weg auf Twitch ein erfolgreicher Streamer zu werden ist lange und mühsehlig. Damit die Content Creator auf dem Weg dort hin die Lust nicht verlieren hat Twitch ein Achievement System in seine Seite eingebaut. Dieses System besteht aus vielen kleinen Aufgaben die es zu erreichen gilt. Solche Aufgaben sind zum Beispiel eine bestimmte Anzahl an Followern zu erreichen, eine Anzahl an Tagen zu Streamen, eine Anzahl an Gleichzeitigen Usern im Chat und viele mehr.
 
-Die Hintergründe des ganzen sind dass Spiele eine Starke Motivation im Benutzer bzw Spieler erzeugen. Diese Motivation wird spezifischen Elementen aus Spielen zugeschrieben. Diese sind im Allgemeinen Punkte, Badges oder Leaderboards im folgenden auch kurz "PBL" genannte
+Zudem gibt es auch vier Meilensteine die man erreichen kann um somit seinen Status als Streamer zu erhöhen. Die drei Stati auf Twitch sind "Streamer", "Affiliate" und "Partner".
 
-Jedoch besteht auch die Verwirrung dass angenommen wird dass das alleinige hinzufügen dieser Elemente bereits Gamification ist. Jedoch ist Gamification viel mehr. Es ist das gezielte ansprechen von Motivationsfaktoren in der menschlichen Psyche
+\begin{figure}[ht]
+\caption{Twitch Meilensteine für Streamer}
+\centering
+\includegraphics[width=0.6\textwidth]{milestones}
+\end{figure}
+Die Meilensteine "Path to Affiliate" und "Path to Partner" sind zudem mit einem neuen Status verkknüpft den ein Streamer erreichen muss um mit seinen Streams Geld zu verdienen. 
 
-Pointification ist das reine Anwenden von PBLs auf ein System ohne durchdachtes System, in der Hoffnung, dass es den Benutzer motiviert.
+\section{Zuschauer Seite}
+% TODO
+Abhängig vom Status des Streamers, ob Affiliate oder Partner, oder auch wie viele Follower und avg. Zuschauer er hat kann der Streamer bestimmte Dinge freischalten (mehr emotes, mehr subs badges, etc)
+%%%%%%
 
-Das Octalysis Framework von YouKaiChou welches die Motivation des Menschen in 8 Teilbereiche unterteilt. Daher auch “Octal”-ysis. In diesem Framework haben wir das Octalysis Strategy Dashboads. Dieses wird dazu eingezetzt ganz spezifisch herauszufinden welche Gamification Elemente eingesetzt werden um vordefinierstes Verhalten auszulösen.
+% TODO
+Twitch ist eine sich sehr schnell entwickelnde Platform. Sie probieren oft neue Elemente aus welche Sie nach wenige Monaten wieder entfernen da diese nicht den gewünschten effekt erzielt haben.
+Es gab mal die Twitch Crates
+Heute gibt es Twitch Drops
 
-Spielertypen nach Andrzej Marczewski besteht aus 6 verschiedenen Arten von Usern. Jedoch kann man einen Menschen nicht direkt einem Typen zuordnen. Vielmehr hat jeder Mensch auch jeden Typen in sich aber unterschiedlich ausgeprägt.
-
-Die Typen nach  Marczewski sind die folgenden:
-
-\textbf{Socialisers} sind motiviert durch die Interaktion und Beziehung zu anderen Usern. Sie wollen mit anderen Interagieren und zu diesen auch soziale Verbindungen aufbauen. Sie wollen andere Menschen um sich herum haben, daher sind diese besonders in sozialen Netzwerken anzutreffen.
-
-
-- Free Spirits are motivated by Autonomy and self-expression. They want to create and explore.
-
-- Achievers are motivated by Mastery. They are looking to learn new things and improve themselves. They want challenges to overcome.
-
-- Philanthropists are motivated by Purpose and Meaning. This group are altruistic, wanting to give to other people and enrich the lives of others in some way with no expectation of reward.
-
-- Players are motivated by Rewards. They will do what is needed of them to collect rewards from a system. They are in it for themselves.
-
-- Disruptors are motivated by Change. In general, they want to disrupt your system, either directly or through other users to force positive or negative change.
-
-Jedem dieser Spielertypen können spezifische 
-
-\section{Gamification auf Twitch}
-
-Da Twitch eine Plattform ist welche ursprünglich nur für das Live Streamen von Videospielen gebaut wurde ist es nicht verwunderlich dass diese auch aktiv sehr viel Gamification in ihrer Software  einsetzen. Sowohl die Seite der Zuschauer als auch die Streamer Seite ist mit Elementen aus Spielen übersäht. Zunächst wird die Seite des Streamers beleuchtet. Dieser wird motiviert weiter zu Streamen um neuen Content für Twitch zu generieren.
-
-\subsection{Streamer Seite}
-Channel Analytics
-Stream Summary
-Achievements
+In dieser Arbeit werden jedoch nur Elemente behandelt die zur Kernmechanik von Twitch dazugehören.
 
 
-\subsection{Zuschauer Seite}
+Die Zuschauer Seite auf Twitch kann in drei Kategorien aufgeteilt werden. Zunächst gibts es nativ in Twitch integrierte Elemente. Diese sind von Twitch selbst implementiert und direkt in das Interface der Seite eingebaut. Sie sind direkt visuell sichtbar.
 
-Achievements
+Zudem gibt es Third-Party Overlays. Diese werden in den Video Feed des Streams eingebunden. 
 
--Alerts im Stream
+\subsection{Nativ in Twitch}
 
--Popup im Chat und Mention vom Bot
+\textbf{Badges}
 
--Mention vom Streamer
+Badges werden im Chat links neben dem Usernamen angezeigt.
+Einzige Ausnahme hierbei ist das "Verified" Badged, welches auch auf der Profilseite eines gepartnerten Streamers angezeigt wird.
 
-Badges 
+Für die Badges gibt es vier verschiedene Typen:
+- Rollengebunden
+- Leaderboard
+- Subscriber
 
--Sub Badges
-- 1st
-- Top Leaderboard 1-3
+Als Mitarbeiter von Twitch kann man den Badge "Twitch Staff" oder "Admins" erhalten. 
 
--Bits Badges
-- 1-1M
-- Top Leaderboard 1-3
+Ist man selbst ein Streamer erhält man den Broadcaster badge, 
 
-- VIP
+Beide jedoch nur im eigenen bzw. vergebenden Stream.
 
+
+- Staff
+- Admin
+- Broadcaster
 - Mod
+- ...
 
-Emotes?!
+\begin{figure}[ht]
+\caption{Rollengebundene Badges}
+\centering
+\includegraphics[width=\textwidth]{x_twitch_badges}
+\end{figure}
 
-Progressbars
-Hypetrain
-Goals im Stream
+\textbf{Leaderboard Badges}
+\begin{figure}[ht]
+\caption{Loaderboard Badges}
+\centering
+\includegraphics[width=0.6\textwidth]{x_twitch_badges_lead}
+\end{figure}
 
-Leaderboards
+\textbf{Sonderbadges}
+TwitchCon
 
--Top 3 Bits und Subgifter über Chat
+Twitch entwickelt sich mit der Zeit immer weiter. Somit müssen manchmal auch alte Elemente neuen Elementen weichen. Früher gab es auch ein "Global Moderator" Badge. Dieses wurde jedoch am 13. Dezember 2018 abgeschafft da Twitch eine Auto Mod Funktion implementiert hat und die Channel Moderator Tools verbessert hat. \parencite{Twitch2018}
 
--Top 1 im Stream
+Zudem macht Twitch hin und wieder Sonderaktion wie Beispielsweise ein Charity Event. Dieses war unter dem Titel "Holiday Season of Giving" im Jahr 2018 vom 12. - 27. Dezember aktiv. Pro 100 Bits hat Twitch in diesem Zeitraum 20ct an Wohltätige Zwecke gespendet. Jeder der in diesem Zeitraum mindestens 100 Bits mit dem Hashtag \#Charity gespendet hat, hat ein Schneflocken Badge bekommen. \parencite{Twitch2018a}
 
--Last im Stream
-Points
-Channelpoints
-Früher Chat Points über 3rd Party
-Ingame Währung
-Bits
+\textbf{Leaderboard}
+Top 10 Sub Gifter
+Top 10 Bitter
 
-
-Hier gibt es zum einen die Subscribtions welche aufgeteilt in drei "Tiers". Drei Stufen mit den Preisen 4.99, 9.99 und 24.99.
-
-Subs verschenken
-Leaderboards
-
-Vorteile:
-Werbefrei schauen
-Community Gefühl!!!!!
-emotes
-Badge im Chat
-recuring bekommen coolere badges
-höhere tiers bekommen zusätzlichen flair
-
+\textbf{Punkte}
 Channelpoints
 * Vorgefertigte
   * Nachricht hervorheben
@@ -439,26 +512,95 @@ Channelpoints
   * Unlock spezifisches Sub emotes
   * ein emote bearbeiten
 
-Channelpoints verdienen
-* Watch for 5 minutes +10
-* Claim special bonuses +50
-* Participate in a Raid +250
-* Follow this channel +300
-* Monthly 1st Cheer +350
-* Monthly 1st Gift a Sub +500
-* Grow a watch streak up to +450
-* Tier 1 sub 1.2x multiplier
-* Tier 2 sub 1.4x multiplier
-* Tier 3 sub 2x multiplier
+\begin{figure}[ht]
+\caption{Channelpoints verdienen}
+\centering
+\includegraphics[width=0.4\textwidth]{channelpoints_earning}
+\end{figure}
 
+\textbf{Währung}
 Bits
 
-HypeTrain
-Der HypeTrain ist ein Event welches eintritt sobald eine Bits Spende in einer bestimmten Höhe oder eine bestimmte anzahl an Subscriptions
 
-Drops
+\textbf{HypeTrain}
+Der HypeTrain ist ein Event welches eintritt sobald innerhalb von fünf Minuten eine bestimmte Menge an Bits und Subscriptions passiert sind. Die Menge um das Event zu triggern kann der Streamer in den Einstellungen selbst festlegen. Dies hat den Vorteil, dass jeder Streamer anhand seiner Reichweite selbst bestimmen kann wann und wie oft der HypeTrain aktiviert werden soll. Passiert dies zu oft verliert der HypeTrain seine "Besonderheit" und wird schnell als störend empfunden.
 
-Mit steigender Beliebtheit der Platform steigt auch die Anzahl der täglichen Nutzer rapide an.
+Zudem kann der Streamer den Schwierigkeitsgrad des Hypetrains bestimmen.
+
+
+\textbf{Drops}
+
+
+\subsection{Third-Party Overlays}
+Hierfür ist es von Nöten in der Streaming Software einige Anpassungen vorzunehmen.
+
+Die drei bekanntesten Streaming Software Programme für Twitch sind Twitch Studio, StreamLabs OBS und OBS Project.
+
+- StreamLabs, Stream Elements und Muxy.
+
+Discord StreamKit
+
+\subsection{Third-Party Bots}
+
+
+
+
+%If the table is too wide, replace \begin{table}[!htp]...\end{table} with
+%\begin{adjustwidth}{-2.5 cm}{-2.5 cm}\centering\begin{threeparttable}[!htb]...\end{threeparttable}\end{adjustwidth}
+\begin{table}[!htp]\centering
+\caption{Gamification auf Twitch}\label{tab: }
+\scriptsize
+\begin{tabular}{lrrr}\toprule
+\textbf{Achievements} &Triggered by &external triggers \\
+Alerts im Stream &free &x \\
+Mention vom Bot &free &x \\
+Mention vom Streamer &free &x \\
+\textbf{} & & \\
+\textbf{Badges} & & \\
+Staff &role staff & \\
+Admin &role admin & \\
+Broadcaster &role broadcaster & \\
+Mod &role mod & \\
+Verified &role verified & \\
+VIP &role vip &x \\
+Twitch Turbo User &role turbo user & \\
+Prime User &role prime user & \\
+1st Sub &sub & \\
+Subgifter (1-1K) &sub gift & \\
+Top Gifter (1-3) &sub gift & \\
+Bits (1-1M) &bits & \\
+Top Bits (1-3) &bits & \\
+Special Events (TwitchCon) &special event & \\
+& & \\
+\textbf{Progressbars} & & \\
+Hypetrain &sub, bits & \\
+Goals im Stream &sub, bits, free &x \\
+\textbf{} & & \\
+\textbf{Leaderboards} & & \\
+Top 3 Bits & Subgifter über Chat &bits / subs & \\
+Top 1 Bitter / Subber im Stream & & \\
+Last Bitter / Subber im Stream & & \\
+\textbf{} & & \\
+\textbf{Ingame Währung} & & \\
+Bits &purchase & \\
+\textbf{} & & \\
+\textbf{Points} & & \\
+Channelpoints &watchtime & \\
+& & \\
+\textbf{Unlockables} & & \\
+Emotes &subs & \\
+Drops &watchtime &x nicht API \\
+& & \\
+\textbf{Voting} & & \\
+Umfragen &streamer & \\
+& & \\
+\textbf{Gifting / Sharing} & & \\
+Gifted Subs &subs & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
 
 %
 %
@@ -470,59 +612,153 @@ Mit steigender Beliebtheit der Platform steigt auch die Anzahl der täglichen Nu
 %
 %
 %
-% ###################################################################### Konzept
+% 
 \chapter{Konzeption und Implementierung}
 
 \section{Anforderungsanalyse}
+Für die Anforderungsanalyse wird ein Ansatz mit einer qualitativen Datenerhebung gefahren. In diesem werden semistrukturierte Interviews durchgeführt. Diese Art der Interviews wird auch Leitfadeninterviews genannt. In den Interviews werden Fragen gestellt um dem Interview eine Thematische Richtung zu geben, es aber nicht zu sehr einzuschränken. \parencite{Wessel2010} Für dieses Interview wurde ein Leitfaden erstellt. In diesem wird der Ablauf genau definiert und dient während des Gespräches als Orientierung.
 
-Für die Anforderungsanalyse wird auf die Prozesse des Requirement Engineerings gesetzt. Qualitative Datenerhebung mit einem semistrukturiertem Interview. In diesem werden Fragen gestellt um dem Interview eine Thematische Richtung zu geben, es aber nicht zu sehr einzuschränken. Für dieses Interview wurde ein Leitfaden erstellt. In diesem wird der Ablauf genau definiert und dient während des Gespräches als Orientierung.
+Hierfür müssen zu Beginn die Interviewfragen systematisch aus der Forschungsfrage der Arbeit abgeleitet werden. Dabei wird auf den Prozess von \cite{Kaiser2014} gesetzt. In diesem werden zunächst aus der Forschungsfrage die Analysedimensionen definiert.
 
-\textbf{Interviewleitfaden}
+Die Forschungsfrage in dieser Arbeit lautet \textbf{"Wie können die Gamification Elemente der Plattform Twitch von Firmen in der Musikbranche für Marketingzwecke eingesetzt werden?"}
 
-Forschungsfrage: Wie können die Gamification Elemente der Plattform Twitch von Firmen in der Musikbranche für Marketingzwecke eingesetzt werden?
+Normalerweise wären die Dimensionen "Relevante Gamification Elemente" und "Marketingzwecke in der Musikbranche". Da ersteres jedoch bereits in dieser Arbeit erörtert wurde wird nur letzteres in diesem Interview behandelt.
 
-\textbf{Einstieg}
+Für die Analysedimensionen wird neben der Batrachtung der Forschungsfrage auch die sekundärliteratur zur Hilfe genommen. Um eine erfolgreiche Marketing Kampagne durchzuführen muss man sich seiner Zielgruppe im klaren sein. \parencite{Knauer2010} Daher sollte in den Interviews auch herausgefunden werden wie genau die Zielgruppe aussieht.
 
-- Begrüßung des Interviewees und Bedanken für die Teilnahme
-- Kurze Einführung in das Thema
-- Erklären des Interview Leitfadens
-- Datenschutzvereinbarung
+Relevante Gamification Elemente
+Musikbranche
+Marketingzwecke
 
-\textbf{Einstiegs fragen}
-- Was genau ist ihre aktuelle Profession und wie lange sind Sie dort schon beschäftigt?
-- Was gehört hierbei zum Tagesgeschäft?
+
+    
+- Monetarisierung
+	- Rev Stream 
+    
+ - Kampagnenziele
+ 	- Aktuelle Ziele
+    - Zukünftige Ziele mit Hinblick auf Gamification
+
+- Zielgruppe
+	- Umgangston
+    - wichtigste Zielgruppe
+
+Im Interviewleitfaden wird zunächst einleitend der Interviewee
+
+\begin{itemize}
+\item Begrüßung des Interviewees und Bedanken für die Teilnahme
+\item Kurze Einführung in das Thema
+\item Erklären des Interview Leitfadens
+\item Datenschutzvereinbarung
+\end{itemize}
+
+
+Daraufhin wird mit Einleitenden Fragen zum Thema hingeführt
+
+\begin{itemize}
+\item Wissen Sie was Gamification ist?
+\item Was genau ist ihre aktuelle Profession und wie lange sind Sie dort schon beschäftigt?
+\item Was gehört hierbei zum Tagesgeschäft?
+\item Wie viele Zuschauer haben Sie im Durchschnitt auf Twitch?
+\end{itemize}
 
 \textbf{Schlüsselfragen}
 
-Frage 1: Was sind die Revenue Streams eines Unternehmens in der Musik Branche?
+\begin{enumerate}
+\item Frage: Was sind die Revenue Streams eines Unternehmens in der Musik Branche? Wie sind diese mit Twitch verknüpft?
+\item Frage: Welche Zielgruppe ist besonders wichtig? Wie ist die demografische Verteilung? Was ist wichtige, Quantität oder Qualität?
+\item Frage: Was sind die aktuellen Wege einen Kunden / Fan zu erreichen? Über welche Kanäle kommunizierst du bereits
+\item Frage: Was ist wichtig im Umgang mit einem Kunden / Fan in ihrer Branche? Welcher Umgangston ist zu verwenden, eher professionell distanziert oder nah relateable?
+\item Frage: Mögliche Ziele einer Marketing Kampagne auf Twitch? Wie könnte man auch Gamification Elemente hierfür einsetzen?
+\end{enumerate}
 
-Frage 2: Welche Zielgruppe ist besonders wichtig?
-
-Frage 3: Was sind die aktuellen Wege einen Kunden / Fan zu erreichen?
-
-Frage 4: Was ist wichtig im Umgang mit einem Kunden / Fan in ihrer Branche? zB Umgangston
-
-Frage 5: Mögliche Ziele einer Marketing Kampagne auf Twitch?
-
-Rückblick
-- Zusammenfassung der Mitschriften
-- Danke für die Teilnahme
-
-Ausblick
-- Information über Verwendung der Informationen
-- Verabschiedung
+Zum Abrunden des Gespräches
+\begin{itemize}
+\item Zusammenfassung der Mitschriften
+\item Information über Verwendung der Informationen
+\item Danke für die Teilnahme
+\item Verabschiedung
+\end{itemize}
 
 \subsection{Erhebung durch Experteninterviews}
+Für die Erhebung der Daten wurden mehrere Experteninterviews durchgeführt. Diese wurden digital in der online meeting software zoom durchgeführt. Durch die integrierte recording Funktion wurden die Interviews aufgezeichnet.
+
+Es wurden insgesamt drei verschiedene Interviews abgehalten. 
+
+\begin{itemize}
+\item Interview 1: Musiker mit 4600 Followern auf Twitch
+\item Interview 2: DJ \& Produzent mit 5600 Followern auf Twitch
+\item Interview 3: DJ mit 87 Followern auf Twitch
+\end{itemize}
+
+
+
+
+Frage 1:
+- Live Performances
+- Streaming Services (Spotify, Apple Music, ...)
+- Musik kaufen (iTunes, Amazon, ...)
+- Musik lizensieren
+- Support Networks (Patreon, ...)
+- LiveStreaming (
+
+Frage 2:
+- treue Fans
+	- die Musik hören
+    - Merch kaufen
+    - im Stream aktiv sind und Subscriben
+- Fans mit denen mit in direktem Kontakt stehen kann
+- "Die-Hard" Fans
+
+Frage 3:
+- socials (insta, twitter,
+- messenger (discord
+- Discord ist sehr wichtig!
+	- Channels in denen Zuschauer sich mitteilen können
+
+Frage 4:
+- "community"
+- bildet sich selbst, da im Chat auch untereinander kommuniziert wird
+
+Frage 5:
+- Release Parties -> Spotify Follows erreichen
+
+
+Sonstiges:
+- es ist wichtig gute Mods zu haben
+- Networking super wichtig
+	- recommendation von anderen Streamern
 
 \subsection{Zusammenfassen der Ergebnisse}
- 
-Inhaltsanalyse nach Kuckartz
+
+Inhaltsanalyse nach Kuckartz \parencite{Kuckartz2018}
 
 Auf eine Transkription des Interviews wurde hierbei verzichtet.
 
 \subsection{Definition der Anforderungen}
 
+Als Marketingziele wird definiert:
+- Merschandise Käufe erhöhen
+- Anzahl der Discord Nutzer erhöhen
+
+\subsection{Gamification Konzept}
+
+Progressbar Merch Soll Anzahl -> Merchandise Kauf -> Alert im Stream
+Progressbar Discord User -> Discord Join -> Alert im Stream
+
+Unter allen Discord Usern und Merch Käufern wird ein 1 Monat VIP Badge verlost
+
+Da Twitch ihre Gamification Elemente bereits seit Jahren erfolgreich einsetzt kann davon ausgegangen werden dass diese auf die Zuschauerschaft abgestimmt sind. Da wir in dieser Arbeit auf die gleichen Elemente zurückgreifen ist eine separate Betrachtung der Spielertypen nicht notwendig.
+
 \section{Architekturkonzept}
+Twitch API
+Twitch IRC Chat Interface
+
+Discord Bot API -> Join Alert
+
+Stream overlay WebSocket
+
+Overlay Server Controller
 
 \section{Prototypische Implementierung}
 
@@ -536,16 +772,14 @@ Auf eine Transkription des Interviews wurde hierbei verzichtet.
 %
 %
 %
-% ###################################################################### Diskussion
+% 
 \chapter{Diskussion}
-
-\section{Evaluation}
-
-Qualitative evaluation mit einem offenen Interview
 
 \section{Kritische Betrachtung}
 
 Da in dieser Arbeit zur Evalation des Ergebnisses nur Experteninterviews durchgeführt wurden ist dieses Ergebnis eher kritisch zu betrachten. Dieser eher subjektiven Ergebnisse kann nicht zu hundert prozent vertraut werden. Hierfür wäre eine Feldtest Studie empehlenswert um Statistisch beweisbare Ergebnisse zu erzeugen.
+
+In den Experteninterviews wurden lediglich Personen befragt die bereits auf Twitch aktiv sind mit einer Zuschauerschaft von 10 - 100 durchschnittlichen Zuschauern.
 
 \section{Empfehlung für zukünftige Forschungen}
 “Neid Faktor” der Achievements im Stream

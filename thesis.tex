@@ -156,6 +156,12 @@ pdfkeywords={Gamification;Marketing;Twitch;Livestreaming;Music}
    \maketitle[{#1}]
  \endgroup
 }
+
+\DeclareLabeldate{%
+  \field{year}
+  \literal{nodate}
+}
+
 \begin{document}
 \frontmatter
 \titlehead{%  {\centering Seitenkopf}
@@ -315,6 +321,8 @@ Tier 3 &24,99 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Da Twitch die Tochterfirma von Amazon ist kann seit einigen Jahren auch der Twitch und Amazon Account verknüpft werden. Ist ein User ein Amazon Prime Mitglied so kann dieser durch die Verknüpfung auch Twitch Prime aktivieren. Seit August 2020 heißt Twitch Prime nun Twitch Gaming.  Hat ein User das Twitch Gaming in seinem account aktiviert so hat er die Möglichkeit ohne Mehrkosten eine Subscribtion bei einem Streamer seiner Wahl abzuschließen. \parencite{Walter2020}
 
 Nach dem Kauf einer Subscibtion ist diese mit samt ihrer Vorteile für einen Monat aktiv.  Durch das Sub kann man den Stream ohne Werbeunterbrechungen schauen.  Zudem Schaltet man die Emotes frei. Das sind kleine Icons die man im Chat verwenden kann. Jeder Abbonent schaltet ein Badge frei welches im Chat neben seinem Namen angezeigt wird. Durch dieses wird direkt sichtbar wer den Streamer unterstützt und wer nicht. Das erzeugt ein starkes Gemeinschafts bzw. Community Gefühl bei allen Badge-Besitzern. Hat man schon mehrere Monate in Folge ein Abo abgeschlossen bekommt man neue Badges. Diese sollen wie ein Abzeichen den Rang eines Unterstützers darstellen.  Hat man eine Abo eines höheren Tiers so wird dem Badge noch ein zusätzlicher Flair verliehen. Ein Flair ist ein zusätzliches Symbol oder Grafik welche auf das Badge gelegt wird. Tier 2 und Tier 3 haben in der Regel unterschiedliche Flairs.
 
@@ -496,7 +504,7 @@ Gibt einige Systemleichen die noch anzutreffen sind jedoch nicht mehr aktiviert 
 In dieser Arbeit werden jedoch nur aktuelle Elemente behandelt.
 %%%%%%%
 
-Die Zuschauer Seite auf Twitch kann in drei Kategorien aufgeteilt werden. Zunächst gibt es nativ in Twitch integrierte Elemente. Diese sind von Twitch selbst implementiert und direkt in das Interface der Seite eingebaut. Sie sind direkt visuell sichtbar. Zudem gibt es Third-Party Overlays. Diese werden in den Video Feed des Streams eingebunden. Als letztes gibt es auch noch Third-Party Bots.
+Die Zuschauer Seite auf Twitch kann in drei Kategorien aufgeteilt werden. Zunächst gibt es nativ in Twitch integrierte Elemente. Diese sind von Twitch selbst implementiert und direkt in das Interface der Seite eingebaut. Sie sind direkt visuell sichtbar. Zudem gibt es Third-Party Overlays. Diese werden in den Video-Feed des Streams eingebunden. Als letztes gibt es auch noch Third-Party Bots.
 
 \subsection{Nativ in Twitch}
 
@@ -637,7 +645,7 @@ Eine besondere Form der Goals ist das Spendenglass. Dies ist wie der Hut eines B
 
 
 \textbf{Achievements}
-Die sogenannten Alerts sind vermutlich die effektivste Möglichkeit auf Twitch einen User motivieren eine Spende zu tätigen oder ein Abbo abzuschließen. Dies sind kurze Animationen die zusammen mit Hintergrundsound die sehr present im Stream Video Feed angezeigt werden. Zusätzlich wird auch der Name des Spenders oder Subscribers angezeigt.
+Die sogenannten Alerts sind vermutlich die effektivste Möglichkeit auf Twitch einen User motivieren eine Spende zu tätigen oder ein Abbo abzuschließen. Dies sind kurze Animationen die zusammen mit Hintergrundsound die sehr present im Stream Video-Feed angezeigt werden. Zusätzlich wird auch der Name des Spenders oder Subscribers angezeigt.
 
 \begin{figure}[ht]
 \caption{Alert Overlay}
@@ -728,117 +736,116 @@ Gifted Subs &subs & \\
 %
 % 
 \chapter{Marketing auf Twitch}
-Online Marketing ist ein sehr großes Feld und umfasst viele verschiedene Strategien. Diese können einzeln angewendet oder miteinander kombiniert werden. Einige Beispiele für Marketing Strategien können \autoref{img:mark_sek} entnommen werden.
-
-Aufgrund des strukturellen Aufbaus von Twitch werden nur bestimmte Formen des Online Marketings dort angewandt. Diese sind Display Marketing, Video Marketing, Branded Content Marketing, Affiliate Marketing und Influence Marketing. Im folgenden werden die verschiedenen Formen anhand von Beispielen erklärt.
-
+Online Marketing ist ein sehr großes Feld und umfasst viele verschiedene Strategien. Diese können einzeln angewandt oder miteinander kombiniert werden. Einige beispielhafte Übersicht über die aktuelle Landschaft der Marketing Strategien kann \autoref{img:mark_sek} entnommen werden.
 
 \begin{figure}[ht]
 \caption{Online Marketing Kompakt im Sektorenmodell \parencite{Volkl-wolf2020}}
 \label{img:mark_sek}
 \centering
-\includegraphics[width=0.7\textwidth]{mark_sek_mod}
+\includegraphics[width=0.8\textwidth]{mark_sek_mod}
 \end{figure}
 
-\section{Display Marketing}
-Eine der ältesten Marketing Methoden im digitalen Bereich ist vermutlich das Display Marketing. Sie wird alternativ auch Banner Werbung genannt. Hierbei werden auf einer Webseite verschiedene Banner eingeblendet, die über Produkte oder Firmen informieren. Diese Banner können in verschiedenen Formen und größen in einer Webseite eingebunden werden. Sie können als sogenannte Skyscraper am rechten oder linken Bildschirmrand auftauchen. Oft werden diese auch zwischen normalen Content einer Webseite angezeigt um in der großen Konzentration eines Betrachters dessen Aufmerksamkeit auf ein Produkt zu lenken. Zudem können auch Banner unerwartet Bildschirmfüllend aufploppen oder sogar als eigenens Fenster oder Tab. Diese Art der Banner wird Pop-Ups genannt.\parencite{Xovi2019}
+Aufgrund des Aufbaus und der Art und Weise wie Twitch funktioniert werden nur bestimmte Formen des Online-Marketings dort angewandt. Diese sind Display-Marketing, Video-Marketing, Branded-Content-Marketing, Affiliate-Marketing und Influencer-Marketing. Im folgenden werden die verschiedenen Formen anhand von Beispielen erklärt. Danach wird bewertet und überprüft, wie Diese mit Gamification kombiniert werden können.
 
-Firmen können auf Twitch Banner Werbung schalten. Diese wird in vier verschiedenen Bereichen der Plattform angezeigt. Beginnend von links nach rechts in \autoref{img:banner_ads} ist die erste Variante eine mittelgroßer Banner welcher in der Explore Seite von Twitch zwischen den Kategorie Kacheln angezeigt wird. Zweiteres wird ebenfalls auf der Explore Seite angezeigt jedoch am oberen Browser Rand als langer horizontaler Balken. 
+\section{Display-Marketing}
+Eine der ältesten Marketing Methoden im digitalen Bereich ist das Display-Marketing. Sie wird alternativ auch Banner-Werbung genannt. Hierbei werden auf einer Webseite verschiedene Banner eingeblendet, die über Produkte oder Firmen informieren. Diese Banner können in verschiedenen Formen und Größen auf einer Webseite eingebunden werden. Zum einen als sogenannte Skyscraper am rechten bzw. linken Bildschirmrand. Oft werden diese auch zwischen normalen Content einer Webseite angezeigt, um die Aufmerksamkeit eines Betrachters in einem konzentrierten Moment auf ein Produkt zu lenken. Zudem können Banner auch unerwartet bildschirmfüllend erscheinen, in manchen Fällen sogar als eigenens Fenster oder Tab. Diese Art der Banner wird Pop-Ups genannt.\parencite{Xovi2019}
 
-Auf der Startseite von Twitch wird als erstes Element das sogenannter Carousel angezeigt. In diesem werden Streams beworben die gerade Live sind. Die Kanäle die dort angezeigt werden haben sich für die dritte Variante der Banner Werbung entschieden. Die letzte Variante ist ein großer horizontaler Banner welcher hinter dem Carousels angezeigt wird. \parencite{Twitch2020}
+Firmen können auf Twitch Banner-Werbung schalten, um Produkte zu bewerben oder ihren Livestream hervorzuheben. Diese Banner werden in vier verschiedenen Bereichen der Plattform angezeigt. Beginnend von links nach rechts in \autoref{img:banner_ads} ist die erste Variante ein mittelgroßer Banner für Produkte, welcher in der Explore Seite von Twitch zwischen den Kategorie-Kacheln angezeigt wird. Zweiteres wird ebenfalls für Produkte auf der Explore Seite angezeigt, jedoch am oberen Browser-Rand als langer horizontaler Balken. 
+
+Auf der Startseite von Twitch wird als erstes Element das sogenannter Carousel (dt. Karussell) angezeigt. In diesem werden Livestreams hervorgehoben. Die Kanäle die dort angezeigt werden, haben sich für die dritte Variante der Banner-Werbung entschieden. Die letzte Variante ist ein großer horizontaler Banner, welcher hinter dem Carousel angezeigt wird um Produkte zu bewerben. \parencite{Twitch2020}
 
 \begin{figure}[ht]
-\caption{Banner platzierung auf Twitch}
+\caption{Banner platzierung auf Twitch \parencite{Twitcha}}
 \label{img:banner_ads}
 \centering
 \includegraphics[width=\textwidth]{twitch_ads_banner}
 \end{figure}
 
 
-\section{Video Marketing}
-Video Marketing ist der Einsatz von audio-visuellen Inhalten  in einer Marketing Kampagne. Einfach betrachtet ist Video Marketing wenn eine Firma ein Video erstellt in welchem auf irgendeine Art und Weise die Firma beworben wird, Verkäufe angeregt, die Bekanntheit einer Marke oder Diensleistung erhöht oder der Kunden in irgendeiner Weise an sich gebunden wird. \parencite{Stringfellow2017}
+\section{Video-Marketing}
+Video-Marketing ist der Einsatz von audio-visuellen Inhalten in einer Marketing Kampagne. Einfach betrachtet ist Video-Marketing das erstellen und platzieren eines Videos. Die Ziele dieser Videos können vielfältig sein und reichen vom bewerben der Firma, anregen von Verkäufen, erhöhen der Bekanntheit einer Marke oder Dienstleistung bis hin zum stärken der Kundenbindung.\parencite{Stringfellow2017}
 
-Da Twitch eine reine Video Plattform ist, ist Video Marketing ein Kernbestandteil dessen. Twitch wurde im Jahr 2019 der "Best Video Marketing and Advertising Platform" Award verliehen. \parencite{DigidayAwards2019} Hierbei wird klar ersichtlich wie viel Potential in Video Marketing auf Twitch steckt.
+Twitch als reine Video-Plattform hat Video-Marketing  als einen Kernbestandteil. Der Plattform wurde im Jahr 2019 der \glqq Best Video Marketing and Advertising Platform\grqq Award verliehen\parencite{DigidayAwards2019}. Hierbei wird klar ersichtlich wie viel Potential in Video Marketing auf Twitch steckt.
 
-Auf Twitch wird Video Marketing zum einen in Form von kurzen Werbeclips im Videofeed des Streams eingesetzt. Hier werden diese zu verschiedenen Zeiten des Streams eingeblendet. Es wird zwischen pre-roll, mid-roll und post-roll Ads unterschieden. Hierbei handelt es sich um klassische Werbe Videos wie sie auch im Fernsehen zu sehen sind. Diese werde vor, während oder nach einem Livestream angezeigt. Klickt ein User beispielsweise auf einen Live Channel um dessen Stream beizutreten wird automatisch ein Werbeclip gestartet wie in \autoref{img:preroll} zu sehen. 
+Auf Twitch wird Video-Marketing zum einen in Form von kurzen Werbeclips im Videofeed des Streams eingesetzt. Hier werden diese zu verschiedenen Zeiten des Streams eingeblendet. Es wird zwischen pre-roll, mid-roll und post-roll Ads unterschieden. Hierbei handelt es sich um klassische Werbevideos wie sie auch im Fernsehen zu sehen sind. Diese werde vor, während oder nach einem Livestream angezeigt. Klickt ein User beispielsweise auf einen Live-Channel um dessen Stream beizutreten, wird automatisch ein Werbeclip gestartet. Wie in \autoref{img:preroll} zu sehen wird oben rechts in der Ecke die noch verbleibende Dauer angezeigt und der Clip kann nicht übersprungen werden. 
 
 \begin{figure}[ht]
-\caption{Twitch Pre-Roll Ad}
+\caption{Twitch Pre-Roll Ad; Screenshot von \parencite{LaraLoft2020}}
 \label{img:preroll}
 \centering
-\includegraphics[width=0.6\textwidth]{twitch_video_preroll}
+\includegraphics[width=\textwidth]{twitch_video_preroll_edit}
 \end{figure}
 
-Bei den Mid-Roll Ads haben die Streamer die Möglichkeit den Zeitpunkt und die Dauer der Einblendung selbst zu bestimmen. Hierbei können sie zwischen 30, 60, 90, 120, 150 und 180 Sekunden wählen. Diese nutzen sie beispielsweise um in möglichst spannenden Szenen des Streams die Aufmerksamkeit auf die Werbung zu lenken oder eine kurze Pause einzulegen. Diese Werbeclips werden im sogenannter Picture-By-Picture Modus angezeigt. Hierbei wird bei aktivieren des Clips der LiveStream verkleinert und im rechten Bildrand angezeigt während die Werbung die ursprünglichen Platz des Streams einnimmt.
-
-Twitch bietet vier veschiedenen Varianten an, mit denen Werbevideos an den Konsumenten ausgeliefert werden. Beginnend von Links nach rechts in \autoref{img:twitch_vid_ads} ist die erste Variante die Ausspielung in der Twitch Mobile App sowie in der Browser Version. Variante zwei und drei betrachtet die Ausspielung auf Mobile und in der App als separate Kanäle. So kann spezifischer auf eine Zielgruppe eingegangen werden. 
-
-Jedoch werden die Ads nicht angezeigt falls man einen Ad Blocker im Browser benutzt. Ist man Subscriber einer Channels oder hat für Twitch Turbo bezahlt werden die Werbeclips auch übersprungen. Variante vier kann das Problem mit dem Ad Blocker allerdings umgehen. Dies ist eine neue Technologie von Twitch welche es der Platform ermöglicht die Werbeclips direkt in den Video Feed des Live Streams zu integrieren.
+Bei den Mid-Roll Ads haben die Streamer die Möglichkeit den Zeitpunkt und die Dauer der Einblendung selbst zu bestimmen. Hierbei können sie zwischen 30, 60, 90, 120, 150 und 180 Sekunden wählen. Diese nutzen sie beispielsweise, um in möglichst spannenden Szenen des Streams die Aufmerksamkeit auf die Werbung zu lenken oder eine kurze Pause einzulegen. Diese Werbeclips werden im sogenannter Picture-By-Picture Modus angezeigt. Hierbei wird bei Aktivieren des Clips der Livestream verkleinert und im rechten Bildrand angezeigt während die Werbung die ursprünglichen Platz des Streams einnimmt. \parencite{Twitch}
 
 \begin{figure}[ht]
-\caption{Twitch Video Marketing Varianten}
+\caption{Twitch Video Marketing Varianten \parencite{Twitcha}}
 \label{img:twitch_vid_ads}
 \centering
 \includegraphics[width=\textwidth]{twitch_ads_video}
 \end{figure}
 
-Video marketing ist auch in anderen Bereichen vertreten.
+Twitch bietet vier veschiedenen Varianten an, mit denen Werbevideos an den Konsumenten ausgeliefert werden. Beginnend von links nach rechts in \autoref{img:twitch_vid_ads} ist die erste Variante die Ausspielung in der Smartphone-App von Twitch sowie in der Browser Version. Variante zwei und drei betrachtet die Ausspielung auf Mobile und in der App als separate Kanäle. So kann spezifischer auf eine Zielgruppe eingegangen werden. \parencite{Twitcha}
 
+Jedoch werden die Ads nicht angezeigt falls man einen AdBlocker (dt. Werbeblocker) im Browser benutzt. Das ist eine Browser Erweiterung welche das Darstellen von Werbung verhindert. Ist man Subscriber eines Channels oder hat für Twitch Turbo bezahlt, werden die Werbeclips auch übersprungen. Variante vier kann das Problem mit dem AdBlocker allerdings umgehen. Es handelt sich um eine neue Technologie mit dem Namen SureStream von Twitch, welche es der Plattform ermöglicht die Werbeclips direkt in den Video-Feed des Livestreams zu integrieren. Dadurch hat ein AdBlocker nicht mehr die Möglichkeit das Abspielen einer Werbung zu unterbinden. \parencite{Twitch2016}
 
-\section{Branded Content Marketing}
-Bei Content Marketing geht es darum relevanten Content zu produzieren welcher die Aufgabe hat den Kunden zu informieren und die Marke in einem besonders guten Licht dastehen zu lassen.
+Zudem wird Video-Marketing auch ganz allgemein auf Twitch eingesetzt. Wie bereits eingangs beschrieben umfasst diese Marketing Strategie jegliche Art von audio-visuellem Content. Somit können auch die im folgenden erklärten Marketing Strategien in der Art und Weise wie sie auf Twitch Anwendung finden, unter dem Video Marketing angesiedelt werden.
 
-"Content marketing is a strategic marketing approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience — and, ultimately, to drive profitable customer action." \parencite{ContentMarketingInstitute2015}
+\section{Branded Content-Marketing}
+Bei Branded Content-Marketing geht es darum relevante Inhalte zu produzieren und diese direkt mit einer Marke zu verknüpfen. Die Inhalte sollen ein positives Gefühl mit der Marke assoziieren und die Gefühle der Zuschauer ansprechen. Sie haben oft einen unterhaltsamen Charakter und es wird in der Regel Storytelling angewendet.  Die Inhalte werden oft auch in Kooperation mehrerer Firmen oder Influencern produziert. Firmen, welche bekannt dafür sind diese Strategien besonders gut einzsetzen, sind Red Bull und Coca Cola. \parencite{Cardona2020}
 
-Branded Content (Original Content)
-- "Old Spice" livestream in dem der Chat entscheiden konnte was der Protagonist tun soll
-
-Im Jahr 2015 startet die Firma Old Spice eine interaktive Kampagne auf Twitch. Unter dem Titel "Old Spice Nature Adventure" wurde ein Live Stream 
+Auf Twitch startete beispielsweise die Firma Old Spice, ein Hersteller von Pflegeprodukte für Herren, im Jahr 2015 eine interaktive Kampagne auf Twitch. Unter dem Titel \glqq Old Spice Nature Adventure\grqq wurde ein Live Stream erstellt in welchem ein Mann mit einer Kamera auf dem Rücken gespannt, durch einen Wald läuft. Das Videosignal dieser Kamera wurde im Stream übertragen. Jeder Zuschauer konnte Vorschläge in den Twitch Chat schreiben, was der Mann als nächstes machen soll. Das Produktionsteam suchte aus diesen Vorschlägen etwa alle 10 - 30 Sekunden den besten aus und der Mann führte diesen durch. Der nächste durchzuführende bzw. aktuelle Vorschlag wurde unten links im Bild (vgl. \autoref{img:oldspice}) zusammen mit dem Namen des Vorschlaggebers eingeblendet.
 
 \begin{figure}[ht]
-\caption{Old Spice Nature Adventure}
+\caption{Old Spice Nature Adventure; Screenshot von \parencite{OldSpice2015}}
+\label{img:oldspice}
 \centering
-\includegraphics[width=0.6\textwidth]{twitch_marketing_old_spice}
+\includegraphics[width=\textwidth]{twitch_marketing_old_spice}
 \end{figure}
 
+Die Kampagne war wie ein Virtuelles Rollen Spiel aufgebaut. Der Mann war der Spieler Charakter welcher durch die Zuschauer gesteuert wurde. Im Wald in dem sich der Mann bewegte waren verschiedene Szenen aufgebaut. Zudem gab es nicht Spieler Charaktere mit denen der Mann interagieren konnte. Es gab auch Menschen die als Tiere verkleidet waren. So gab es auch einige Szenen in denen der Mann gegen einen Bären kämpfen musste (vgl. \autoref{img:oldspice}).
 
-- Duracell 2016 "1 Charge Challenge"
+Insgesamt wurde die Werbekampagne von Old Spice als sehr erfolgreich eingestuft. Diese erreichte 2,56 Millionen Aufrufe und 29 Jahre an insgesamt angesehenem Video Material. Die exklusiv für diesen Stream freigeschaltenen Chat Emotes wurden über 105.000 mal verwendet.  \parencite{Workman2015}
 
-\section{Affiliate marketing}
-Affiliate Marketing ist ein provisionsbasierter Anzatz um ein Produkt direkt an den Mann zu bringen. Hierbei werden können sich Content ersteller sogenannte Affiliate Links generieren welche direkt auf die Kaufsseite eines Produktes verweisen. Diesem Link ist ein Flag mitgegeben welches auf den Linkersteller zurückführt. Der Link wird in der Regel bei Produktreviews, Inventarlisten oder in Artikeln über die bestimmte Produktkategorie als Empfehlung eingesetzt.
-
-Klickt ein Kunde nun auf einen solchen Link gelangt er direkt auf die Kaufsseite des Produktes. Kauft der Kunde sich dieses Produkt so zahlt der Verkäuft eine Provision an den Linkersteller aus. 
-
-Manche Plattformen wie Amazon vergüten auch die reine referenzierung auf ihre Platform. Hat ein Kunde auf einen Affiliate Link geklickt und befindet sich auf der Produktseite, kauft jedoch das verlinkte Produkt nicht, sondern ein anderes auf der Platform so bekommt der Verlinker dennoch eine Provieion für die Weiterleitung auf die Platform.
+\section{Affiliate-Marketing}
+Affiliate-Marketing ist ein provisionsbasierter Anzatz, um ein Produkt direkt an die Konsumenten zu bringen. Hierbei können sich Content Creator sogenannte \glqq Affiliate-Links\grqq generieren, welche direkt auf die Kaufsseite eines Produktes verweisen. In diesem Link ist ein Parameter gesetzt, welcher den Linkersteller eindeutig also solchen identifiziert, sozusagen eine Referenz zu diesem hergestellt wird. Die Links werden deshalb auf \glqq Ref\grqq-Links genannt. Sie wird in der Regel bei Produktreviews, Inventarlisten oder in Artikeln über die bestimmte Produktkategorie als Empfehlung eingesetzt. Klickt ein Kunde nun auf einen solchen Link gelangt er direkt auf die Kaufsseite des Produktes. Kauft der Kunde sich dieses Produkt zahlt der Verkäufer eine Provision an den Linkersteller aus, für den Käufer entstehen jedoch keine Mehrkosten. \parencite{Gallaugher2001}
 
 \begin{figure}[ht]
-\caption{Ref Links}
+\caption{Ref Links in der \glqq About\grqq -Sektion auf Twitch \parencite{LeosMind}}
+\label{img:aff_about}
 \centering
-\includegraphics[width=0.8\textwidth]{twitch_affiliate_reflinks}
+\includegraphics[width=\textwidth]{twitch_affiliate_reflinks}
 \end{figure}
 
-\section{Influencer marketing}
+Twitch bietet die Möglichkeit in der \glqq About\grqq -Sektion eines Profils verschiedene Banner und Texte einzublenden. Ebenso können auch Links eingebunden werden. Dieser Bereich wird von vielen Streamern dazu genutzt Affiliate-Links zu integrieren. Die \glqq About\grqq -Sektion wird auch während eines Streams unterhalb des Video-Feeds angezeigt. Wie in \autoref{img:aff_about} zu sehen, hat der Streamer (1) eine Liste mit den dazugehörigen Links seiner verwendeten Hardware in seiner \glqq About\grqq -Sektion integriert. Jeder dieser Links ist ein \glqq Ref\grqq-Link zu Amazon. Auch ein (2) Banner, welcher zur Seite eines Drittanbieters führt, wurde mit einem \glqq Ref\grqq-Link versehen. Zudem kann der Streamer über einen Bot auch regelmäßig \glqq Ref\grqq-Links in den Chat schicken lassen. Bots sind kleine Programme welche sich mit dem Twitch Chat verbinden um Nachrichten zu lesen und zu schreiben.
 
-Um zu verstehen was Influencer Marketing bedeutet muss zunächst der Begriff Influencer erklärt werden. Ein Influencer ist eine Person welche aufgrund ihres Status und Reichweite in einer Niche einen signifikanten Einfluss auf die Kauffentscheidungen anderer Personen hat. \parencite{Brown2008, InfluencerMarketingHub2017} 
+\section{Influencer-Marketing}
 
-Solch in Influencer wird von Firmen bezahlt um derenen Produkte zu bewerben. Wenn es sich bei einem Influencer um eine Werbebotschaft handelt so muss dies ausdrücklich gekennzeichnet sein.
+Um zu verstehen was Influencer-Marketing bedeutet muss zunächst der Begriff Influencer erklärt werden. Ein Influencer ist eine Person welche aufgrund ihres Status und ihrer Reichweite in einer Nische einen signifikanten Einfluss auf die Kaufentscheidungen anderer Personen hat \parencite{Brown2008, InfluencerMarketingHub2017}. Solch in Influencer wird von Firmen bezahlt um deren Produkte zu bewerben.
 
-Die Bewerbung der Produkte kann er auf verschiedene Arten machen.
-
-Product Placements
-
-Zum Start von Alien: Convenant im Jahr 2017 führte 20th Century Fox eine Kampagne auf Twitch durch. Diese sollte eine junge Zielgruppe für den neuen Teil der beliebten Filmreihe erreichen. Da der letzte Film der Reihe bereits im Jahr 1997 erschienen ist, waren die durschnittlichen Twitch-User noch zu jung, um diesen gesehen zu haben. Um diese jedoch als neue Zielgruppe zu gewinnen wurden vier Streamer aus vier verschiedenen Ländern für eine Kooperation bezahlt. Diese Kampagne bestand jedoch nicht aus dem besprechen des Films oder dem gemeinsamen schauen des Trailers im Stream. Hierbei wurde kurz vor Ende der jeweiligen Streams eine Alien-Invasion insziniert. Mit flackernden Lichtern, Bildstörungen oder auch echte CGI-Effekte wie Schleimfäden die von der Decke hingen und ein Alien Schwanz der am Rande des Bildes vorbeistreift wurde zuerst eine gruselige Atmosphäre geschaffen um Spannung aufzubauen. Nachdem das Licht komplett ausfiel und der Streamer aus der Kamera trat um dieses wieder einzuschalten Sprang ein Alien direkt in die Kamera um die Zuschauer zu erschrecken. Daraufhin startet der Trailer zum neuen Film. Dieser erreichte somit mehr als eine halbe Millionen Aufrufe und die Kampagne war ein voller Erfolg. \parencite{T3N2018}
+Die Bewerbung der Produkte kann er auf verschiedene Arten machen. Dies sind gesponserte Inhalte, Empfehlungen oder Produktplatzierungen. So können auf YouTube beispielsweise Firmen einem Influencer verschiedene Produkte kostenlos zur Verfügung stellen der diese in seinen Videos einsetzt, präsentiert oder als besonders gut darstellen. \parencite{Geyser2016}
 
 \begin{figure}[ht]
 \caption{Alien Promotion von Lara Loft}
+\label{img:laraloftalien}
 \centering
-\includegraphics[width=0.6\textwidth]{twitch_laraloft_alien_promo_edit}
+\includegraphics[width=\textwidth]{twitch_laraloft_alien_promo_edit}
 \end{figure}
 
-\section{Bewertung der einzelnen Marketing Methoden}
+Zum Start von \glqq Alien: Convenant\grqq im Jahr 2017 führte 20th Century Fox eine Kampagne auf Twitch durch. Diese bestand jedoch nicht aus dem Besprechen des Films oder dem gemeinsamen Schauen des Trailers im Stream, sondern aus der Inszinierung einer Alien-Invasion kurz vor Ende des Streams. Es wurde mit flackernden Lichtern, Bildstörungen oder auch wie in \autoref{img:laraloftalien} zu sehen mit CGI-Effekten wie (1) deutlichen Kratzern an der Wand und (2) einem Alienschwanz, der am Rande des Bildes vorbeistreift zuerst eine gruselige Atmosphäre geschaffen, um Spannung aufzubauen. Nachdem das Licht komplett ausfiel und die Streamerin aus der Kamera trat, um dieses wieder einzuschalten, sprang ein Alien direkt in die Kamera um die Zuschauer zu erschrecken. Daraufhin startet der Trailer zum neuen Film. Dieser erreichte somit mehr als eine halbe Millionen Aufrufe und die Kampagne war ein Erfolg. \parencite{T3N2018}
 
+\section{Bewertung der einzelnen Marketingmethoden}
 
+Für die Bewertung der einzelnen Marketing Methoden auf Twitch wurden diese im Detail über mehrere Monate beobachtet. 
 
+Hierbei wurde festgestellt, dass die Banner des Display Marketings offensichtlich kaum noch eine Rolle spielen. Bei der Aktivierung eines AdBlockers werden diese zuverlässig ausgeblendet. War der AdBlocker jedoch deaktiviert, so war die Wahrscheinlichkeit, dass ein Banner angezeigt wurde, sehr gering. Während des Schreibens dieser Arbeit wurde gezielt auf die Benutzung eines AdBlockers verzichtet. Jedoch wurde im gesamten Zeitraum von drei Monaten nur einmal ein Banner im Header der Startseite angezeigt.  Deshalb werden Banner für diese Arbeit als nicht relevant definiert.
+
+Da bei Affiliate Marketing durch einen Link auf die Seite eines Drittanbieters weitergeleitet wird, können die dortigen technischen Freiheiten genutzt werden. So könnte beim Kauf eines Produktes ein Event ausgelöst werden, welches die Overlays in einem Twitch Video-Feed beeinflusst. Somit bietet diese Marketing Strategie eine Möglichkeit in dieser Arbeit. Hierzu mehr in \autoref{kap:gami_konzept}.
+
+Video-Marketing ist für Unternehmen eine einfache und lukrative Methode 
+Die neue Technologie der SureStreams kann, wie beworben, auch von einem Ad Blocker nicht umgangen werden. Die Gamification Elemente der Plattform finden jedoch erst ihren Einsatz im Video-Feed des Streamers. Somit können die Video Ads auch als nicht relevant definiert werden. Allerdings ist Video Marketing auf Twitch wie bereits beschrieben auch in Branded Content Marketing und Influencer Marketing implementiert. 
+
+Als Resultat können als Marketing Strategie dieser Arbeit drei Möglichkeiten definiert werden. Erstens der Live Stream einer Firma die eigenen Content über ihren eigenen Channel produziert. Zweitens wenn Firmen einen Influencer bezahlen um Content zu prodzieren welcher auf dem Channel des Influencers ausgestrahlt wird. Drittens das Affiliate Marketing mit den entsprechenden Links. 
 %
 %
 %
@@ -948,6 +955,7 @@ Als Marketingziele wird definiert:
 Die bereits im Kapitel
 
 \subsection{Gamification Konzept}
+\label{kap:gami_konzept}
 
 Progressbar Merch Soll Anzahl -> Merchandise Kauf -> Alert im Stream
 Progressbar Discord User -> Discord Join -> Alert im Stream
@@ -983,8 +991,6 @@ Overlay Server Controller
 \centering
 \includegraphics[width=\textwidth]{Architekturkonzept}
 \end{figure}
-
-\section{Prototypische Implementierung}
 
 %
 %

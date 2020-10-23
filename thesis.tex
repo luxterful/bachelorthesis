@@ -157,6 +157,16 @@ pdfkeywords={Gamification;Marketing;Twitch;Livestreaming;Music}
  \endgroup
 }
 
+\newcommand*{\inlineimg}[1]{%
+    \raisebox{-.3\baselineskip}{%
+        \includegraphics[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+
 \DeclareLabeldate{%
   \field{year}
   \literal{nodate}
@@ -270,19 +280,22 @@ Um am Ende meinen Prototypen zu evaluieren wurde mit den Experten vom Anfang noc
 \section{Twitch}
 \label{chap:grund_twitch}
 
+Twitch ist eine Live Web Video Plattform die von Amazon betrieben wird. Im März 2020 verzeichnete das Portal durchschnittlich 1,44 Mio gleichzeitige Zuschauer. Im gleichen Zeitraum streamten durchschnittlich 56,000 Streamer die konsumierten Inhalte. Im April 2020 erreichte Twitch Platz 33 im Vergleich mit allen anderen Websites in puncto Daten Traffic. \parencite{Iqbal2020}
+
+Twitch entstand als Nebenprojekt aus der Live Video Plattform Justin.tv die im Jahr 2007 gegründet wurde. Justin.tv bot jedem Menschen mit Internetzugang die Möglichkeit kostenlos eigene Live Shows ins Internet zu Streamen, sogenannte Broadcasts. Aufgrund der hohen Anfrage von Videospiel Content wurde eine zweite Seite dediziert für Videospiele gestartet. Sie ging unter dem heute bekannten Namen Twitch im Jahr 2011 ans Netz. Später wurde auch der Name der Firma in Twitch umbenannt und Justin.tv wurde aufgrund von Prioritäten vom Netz genommen. Im Jahr 2014 wurde Twitch von Amazon gekauft.
+
+Auf Twitch gibt es die sogenannten Channels (dt. Kanäle). Jeder Twitch User hat einen eigenen Channel. Findet ein User den Channel eines anderen Users interessant und möchte benachrichtigt werden sobald dieser Live geht, so kann er diesem folgen. Jeder Channel hat eine eigene Seite und Internetadresse wo der Channel-Betreiber in der \glqq About\grqq-Sektion Texte und Bilder einbauen kann. Diese Sektion wird in der Regel zum Beispiel für Infos über den Streamer als Person,  Infos und Links seiner Werbepartner oder Links zu seinen anderen Auftritten im Internet genutzt. Ist der Streamer gerade Live wird der Video-Feed des Livestreams wie in \autoref{img:twitch_channel} groß und zentral auf dem Channel angezeigt. Auf der linken Seite im Bild ist eine Liste zu sehen mit Channels denen der User folgt. Hierbei werden Channels die gerade Live sind ganz oben in der Liste zusammen mit ihren aktuellen Zuschauerzahlen angezeigt.
+
+Die Besonderheit von Twitch ist die Kombination aus High-Fidelity Video Content und Text basierter Kommunikation über einen Chat \parencite{Hamilton2014}. Hierbei haben Zuschauer in einem Livestream die Möglichkeit in Echtzeit untereinander und mit dem Streamer zu kommunizieren. Der Chat wird wie in \autoref{img:twitch_channel}  zu sehen rechts neben dem Video-Feed des Livestreams angezeigt. Die wohl charakteristischsten Elemente im Chat sind die sogenannter Emotes. Dies sind kleine Bildzeichen die im Live Chat eingesetzt werden können um mehr Emotionen im Text auszudrücken. Sie sind Kernbestandteil der Sprache auf Twitch. Die sogenannten Global-Emotes sind für jeden User verfügbar. Es gibt aber auch Emotes die man erst freischalten muss. Dazu aber weiter unten mehr. Das beliebteste Global-Emote ist \glqq Kappa\grqq (\inlineimg{kappa}). Es zeigt die schwarz weiß Abbildung des Gesichts eines ehemalige Twitch Entwicklers. \parencite{Barbieri2018}
+
 \begin{figure}[ht]
 \caption{Twitch Layout}
+\label{img:twitch_channel}
 \centering
 \includegraphics[width=\textwidth]{twitch_eskei_screen}
 \end{figure}
 
-Twitch ist eine Live Web Video Plattform welche von Amazon betrieben wird. Im März 2020 verzeichnete das Portal durchschnittlich 1,44 Mio gleichzeitige Zuschauer. Im gleichen Zeitraum streamten durchschnittlich 56,000 Streamer die konsumierten Inhalte. Im April 2020 erreichte Twitch Platz 33 im Vergleich mit allen anderen Websites in puncto Daten Traffic. \parencite{Iqbal2020}
-
-Seinen Ursprung hat Twitch auf der Live Video Plattform Justin.tv welche im Jahr 2007 gegründet. Diese Plattform wurde gebaut um Usern die Möglichkeit zu bieten kostenlos eigene Live Shows ins Internet zu Streamen. Aufgrund der hohen Anfrage von Videospiel Content auf dieser Seite wurde eine zweite Seite dediziert für Videospiele mit dem heute bekannten Namen Twitch gestartet welche im Jahr 2011 ans Netz ging. Später wurde auch der Name der Firma in Twitch umbenannt und Justin.tv wurde aufgrund von Priotiäten vom Netz genommen. Im Jahr 2014 wurde Twitch von Amazon gekauft und ist seitdem der Betreiber.
-
-Auf Twtich gibt es die sogenannten Channels (dt. Kanäle). Jeder Twitch User hat einen eigenen Channel auf dem er LIVE Video Streams zur Verfügung stellen kann. Die Plattform ist für beide Seiten komplett kostenlos. Sowohl Zuschauer Seite als auch die Seite des Streamers. Für das Konsumieren der Inhalte der Plattform benötigt man keinen Account. Möchte man aber in einer Chat Diskussion teilnehmen, einem Channel folgen oder selbst streamen muss man sich einen Account erstellen und mit diesem angemeldet sein.
-
-Auf der Startseite von Twitch bekommt der User Inhalte vorgeschlagen die ihm gefallen könnten. Darunter viele Kanäle die aktuell Live sind. Jeder Stream wird einer Kategorie zugeordnet wobei eine Kategorie in der Regel ein Video Spiel ist. Die beliebtesten Spiele aller Zeiten auf Twitch  laut Statista können der \autoref{tab:twitchStat2020} entnommen werden. \parencite{Statista2020}
+Jeder Livestream wird vom Streamer einer Kategorie zugeordnet. Sie spiegelt den Inhalt des Livestreams wider. Diese erleichterten das Auffinden von für den User interessanten Livestreams. So werden auf der Startseite dem User Live Channels angezeigt die gerade Kategorien Streamen die den User interessierten könnten. Zudem bietet Twitch über die \glqq Browse\grqq-Seite die Möglichkeit spezifisch nach Kategorien zu Filtern. Der größte Teil der Kategorie sind in der Regel Videospiele. Die beliebtesten Spiele aller Zeiten auf Twitch laut Statista können der \autoref{tab:twitchStat2020} entnommen werden. \parencite{Statista2020}
 
 \begin{table}[!htp]\centering
 \caption{Statista 2020}\label{tab:twitchStat2020}
@@ -305,39 +318,32 @@ Tom Clancy's Rainbow Six: Siege &2,67 \\
 \end{tabular}
 \end{table}
 
-Wie bereits erwähnt war zu Beginn von Twitch der Fokus auf reinem Gaming Content. Seit der Übernahme von Amazon ist ein deutlicher Trend zu erkennen, dass auch andere Kategorien eingeführt und beworben werden. Neben Videospielen können auch viele andere Kategorien gestreamt werden. Unter anderem Just Chatting bei dem der Streamer sich einfach mit den Zuschauern über alle möglichen Themen unterhält, gemeinsam Videos auf YouTube anschaut oder auch andere Streamer bewertet. Die Bandbreite reicht bis hin zu Kochen, Musik oder auch ASMR. \parencite{Alexander2018}
+Wie bereits erwähnt war zu Beginn von Twitch der Fokus auf reinem Gaming Content. Seit der Übernahme von Amazon ist ein deutlicher Trend zu erkennen, dass auch andere Kategorien eingeführt und beworben werden. Unter anderem Just Chatting bei dem der Streamer sich einfach mit den Zuschauern über alle möglichen Themen unterhält, gemeinsam Videos auf YouTube anschaut oder auch andere Streamer bewertet. Die Bandbreite reicht bis hin zu Kochen, Musik oder auch DIY. \parencite{Alexander2018}
 
-Das Streamen wird von vielen Streamer zu Beginn erst nur als Hobby angesehen. Damit das Streamen auch finanziell lukrativ wird hat Twitch die Möglichkeit eingebaut, dass Zuschauer einen Streamer auch finanziell unterstützen können. Hierfür müssen Streamer den sogenannten Affiliate oder Partner Status erreichen. Diese Status ermöglichen dem Streamer die sogenannten Subscribtions (dt. Abonements) und Bits zu aktivieren. 
+Die Plattform ist für beide Seiten kostenlos. Sowohl für die Seite des Zuschauers als auch für die des Streamers. Für das Konsumieren der Inhalte der Plattform benötigt man keinen Account. Möchte man aber in einer Chat Diskussion teilnehmen, einem Channel folgen oder selbst streamen muss man sich einen Account erstellen und mit diesem angemeldet sein.
 
-Die Subscribtions bzw Abbonements sind sind eine Möglichkeit einen Streamer auf monatlicher Basis zu unterstützen. Es gibt drei Stufen, die sogenannten "Tiers". Die Preise der jeweiligen Stufen können \autoref{tab:tierPreise} entnommen werden. Der Streamer erhält von den Kosten als Affiliate jeweils 50\%.  Die andere Hälfte behält Twitch. Als Partner ist die Teilung bei 50/50, 60/40 und 70/30 für Tier 1, 2 und 3. 
+Das Streamen wird von vielen Streamer zu Beginn erst nur als Hobby angesehen. Damit das Streamen auch finanziell lukrativ wird hat Twitch die Möglichkeit eingebaut, dass Zuschauer einen Streamer auch finanziell unterstützen können. Hierfür müssen Streamer den sogenannten Affiliate oder Partner Status erreichen. Diese Status ermöglichen dem Streamer die sogenannten Subscription (dt. Abonnements) und Bits zu aktivieren. 
+
+Die Subscriptions sind eine Möglichkeit einen Streamer auf monatlicher Basis finanziell zu unterstützen. Es gibt drei Stufen, die sogenannten "Tiers". Die Preise der jeweiligen Tiers können \autoref{img:tierPreise} entnommen werden. Der Streamer erhält hiervon als Affiliate jeweils 50\%.  Die andere Hälfte behält Twitch. Als Partner ist die Teilung bei 50/50, 60/40 und 70/30 für Tier 1, 2 und 3. Durch die Zugehörigkeit von Twitch zu Amazon haben Amazon Prime Mitglieder Vorteile. Hat ein Amazon Prime Mitglied seinen Accounts mit Twitch verknüpft, so hat er die Möglichkeit ohne Mehrkosten eine Tier 1 Subscription im Monat bei einem Streamer seiner Wahl abzuschließen \parencite{Walter2020}. Zudem erhält der User ein sogenanntes Chat-Badge. Dieses ist ein kleines Symbol, das im Chat links neben seinem Namen angezeigt wird. Im Fall von Prime Gaming ist es eine blau weiße Krone.
+
+\begin{figure}[ht]
+\caption{Twitch Subscibtions \parencite{Twitchd}}
+\label{img:tierPreise}
+\centering
+\includegraphics[width=0.6\textwidth]{twitch_sub}
+\end{figure}
+
+Nach dem Kauf einer Subscription ist diese mit samt ihrer Vorteile für einen Monat aktiv. Durch das Subscriben kann der Stream ohne Werbeunterbrechungen geschaut werden. Zudem werden die sogenannten Channel-Emotes freigeschalten. Diese kann der Streamer selbst erstellen um sie individuell an seinen Channel anzupassen. Jeder Subscriber schaltet ein Channel-Badge frei. Hat dieser schon mehrmals subscribet so kann sich das Badge je nach Channel und Dauer verändern. Hierdurch wird im Chat direkt sichtbar wer den Streamer unterstützt. Diese Badges sind ebenfalls in jedem Channel individuell angepasst.
+
+Des weiteren kann ein Streamer im Falle eines sehr aktiven und somit unübersichtlichen Chatst den Follower-Only oder Subscriber-Only Modus aktivieren. In diesen Modi ist es nur Followern bzw Subscribern möglich zu schreiben. Somit ist ein weiterer Vorteil des Subscribens auch in diesem Modus in den Chat schreiben zu können.
+
+Ein User kann nicht nur sich selbst eine Subscription kaufen sondern auch anderen. Dieser Vorgang wird auch \glqq Giften\grqq genannt und macht aus dem Schenkenden einen \glqq Gifter\grqq.
+Beim Schenken besteht die Möglichkeit einer bestimmten Person eine Subscribtion oder eine bestimmte Anzahl an Subscribtions an die Community zu vergeben. Bei letzerem entscheidet Twitch zufällig wer dann diese Geschenke erhält.
+
+Die bereits vorher erwähnten Bits sind eine digitale Währung der Plattform, die für Echtgeld erworben werden kann. Sie können für verschiedene Dinge eingesetzt werden, unter anderem für das sogenannter "Cheeren". Dies kann als "Anfeuern" ins Deutsche übersetzt werden und bedeutet, dass eine Nachricht in den Chat geschrieben wird, die mit animierten Cheer-Emotes versehen wurde. Den Mindestbetrag für ein Cheer kann der Streamer selbst bestimmen und startet bei einem Bit. Die Preise der Bits können der \autoref{tab:bitsPreise} entnommen werden. Ein Bit entspricht einem US Cent, den der Streamer erhält. In der Tabelle wird deutlich, dass sich Twitch beim Kauf der Bits einen bestimmten Prozentsatz einbehält.
 
 \begin{table}[!htp]\centering
-\caption{Subscibtions Preise Stand 18.10.2020}\label{tab:tierPreise}
-\scriptsize
-\begin{tabular}{lrr}\toprule
-\textbf{Tier} &\textbf{Preis in Eur} \\\midrule
-Tier 1 &4,99 \\
-Tier 2 &9,99 \\
-Tier 3 &24,99 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Da Twitch die Tochterfirma von Amazon ist kann seit einigen Jahren auch der Twitch und Amazon Account verknüpft werden. Ist ein User ein Amazon Prime Mitglied so kann dieser durch die Verknüpfung auch Twitch Prime aktivieren. Seit August 2020 heißt Twitch Prime nun Twitch Gaming.  Hat ein User das Twitch Gaming in seinem account aktiviert so hat er die Möglichkeit ohne Mehrkosten eine Subscribtion bei einem Streamer seiner Wahl abzuschließen. \parencite{Walter2020}
-
-Nach dem Kauf einer Subscibtion ist diese mit samt ihrer Vorteile für einen Monat aktiv.  Durch das Sub kann man den Stream ohne Werbeunterbrechungen schauen.  Zudem Schaltet man die Emotes frei. Das sind kleine Icons die man im Chat verwenden kann. Jeder Abbonent schaltet ein Badge frei welches im Chat neben seinem Namen angezeigt wird. Durch dieses wird direkt sichtbar wer den Streamer unterstützt und wer nicht. Das erzeugt ein starkes Gemeinschafts bzw. Community Gefühl bei allen Badge-Besitzern. Hat man schon mehrere Monate in Folge ein Abo abgeschlossen bekommt man neue Badges. Diese sollen wie ein Abzeichen den Rang eines Unterstützers darstellen.  Hat man eine Abo eines höheren Tiers so wird dem Badge noch ein zusätzlicher Flair verliehen. Ein Flair ist ein zusätzliches Symbol oder Grafik welche auf das Badge gelegt wird. Tier 2 und Tier 3 haben in der Regel unterschiedliche Flairs.
-
-\textbf{Sub Gifter}
-
-Zudem kann ein User nicht nur sich ein Sub kaufen sondern auch anderen Subs schenken. Sei es einer bestimmten Person oder eine bestimmte Anzahl an die Community. Bei letzerem entscheidet Twitch zufällig wer dann diese Geschenke erhält.
-
-\textbf{Bits}
-
-Zweiteres ist eine digitale Währung der Platform die für Echtgeld erworben werden kann.  Diese Bits können für verschiedene Dinge eingesetzt werden. So kann man zum einen "Cheeren". Dies kann als "Anfeuern" ins Deutsche übersetzt werden und bedeutet dass man eine Nachricht in den Chat schreibt und diese mit Animierten emotes versieht. Den Mindestbetrag für ein Cheer kann der Streamer selbst bestimmen und startet bei 1 Cheer.
-
-Bits können gekauft werden für:
-\begin{table}[!htp]\centering
-\caption{Bits Preise Stand 18.10.2020}\label{bitsPreise: }
+\caption{Bits Preise Stand 18.10.2020}\label{tab:bitsPreise}
 \scriptsize
 \begin{tabular}{lrr}\toprule
 \textbf{Anzahl der Bits} &\textbf{Preis in Eur} \\\midrule
@@ -351,72 +357,41 @@ Bits können gekauft werden für:
 \end{tabular}
 \end{table}
 
-Ein Bit entspricht einem US Cent. Hierbei wird deutlich, dass sich Twitch bei jedem gekauften Pack von Bits einen bestimmten Prozentsatz einbehält.
-
-\textbf{Chat}
-Die Besonderheit von Twitch ist die Kombination aus High-Fidelity Computer Grafik und Video Content und Low-Fidality Text basierter Kommunikation über einen Chat. \parencite{Hamilton2014} Hierbei haben Zuschauer die Möglichkeit in Echtzeit miteinander und mit dem Streamer zu kommunizieren. 
-
-
-Die wohl charakteristischsten Elemente im Chat sind die Emotes. Dies sind kleine Symbole die im Live Chat eingesetzt werden können. Sie sind Kernbestandteil der Sprache auf Twitch. \parencite{Barbieri2018}
-
-Hierbei gibt es grundsätzlich drei verschiedene Arten von Emotes. Zum ersten die Global Emotes, diese kann jeder Twitch User verwenden.
-
-Zum zweiten freischaltbare emotes welche durch 
-- Unlockable emotes
-- Sub Emotes
-
-
-\textbf{Leader board}
-
-Oberhalb des Chats ist eine List mit den Top 10 Sub Gifter sowie den Top 10 Cheerers. 
+Oberhalb des Chats ist eine List mit den Top 10 Sub Gifter sowie den Top 10 Cheerers. Diese Liste wird auch Leaderboard genannt.
 
 \begin{figure}[ht]
 \caption{Leaderboards}
 \centering
 \includegraphics[width=0.5\textwidth]{Twitch_Leaderboards}
 \end{figure}
+Ein weiteres Mittel das einen User dazu animieren soll einen Streamer zu unterstützen ist der sogenannter HypeTrain. Dieser ist ein Event welches automatisch eintritt sobald innerhalb von fünf Minuten eine bestimmte Menge an Bits und Anzahl an Subscriptionkäufe getätigt wurden. Die Menge um das Event zu triggern kann der Streamer in den Einstellungen selbst festlegen. Dies hat den Vorteil, dass jeder Streamer anhand seiner Zuschauerzahl selbst bestimmen kann wann und wie oft der HypeTrain aktiviert werden soll. Passiert dies allerdings zu oft, verliert der HypeTrain seine "Besonderheit" und wird schnell als störend empfunden. Der Streamer muss ihn deshalb mit Bedacht einsetzen.
 
-\textbf{HypeTrains} % TODO BILD QUELLE!
+Bei Aktivierung des HypeTrains wird oberhalb des Chats ein Fortschrittsbalken mit Prozentzahl und Countdown angezeigt. Das Ziel der Zuschauer ist es nun diesen Balken mit Hilfe von Subscribtions und Cheers zu füllen. Der HypeTrain ist aufgeteilt in aufeinanderfolgende Level. Es können bis zu fünf Level abgeschlossen werden. Jedes Level muss innerhalb von jeweils fünf Minuten abgeschlossen werden, ansonsten bricht der Hypetrain ab sobald der Countdown bei Null angekommen ist. Der Streamer kann den Schwierigkeitsgrad des Hypetrains bestimmen. Das bedeutet in diesem Fall wie viele Bits und Subscribtions benötigt werden damit ein Level abgeschlossen wird. Bei erfolgreichem Abschluss des HypeTrains erhalten die Teilnehmer als  Belohnung je nach Level verschiedene Emotes.
 
-Der HypeTrain ist ein Event welches eintritt sobald innerhalb von fünf Minuten eine bestimmte Menge an Bits und Subscriptions passiert sind. Der HypeTrain ist wie eine Art Endgegner in einem VideoSpiel. Mit Hilfe von Subs und Bits muss dieser besiegt werden. In Twitch wird Oberhalb des Chats ein Fortschrittsbalken angezeigt der sich füllt je nachdem wie viele Subs und Bits gespendet wurden. 
-
-
-
-Der Hypetrain ist aufgeteilt in Level. Es können bis zu fünf Level abgeschlossen werden.
-
-Als zusätzlicher Druck ist die Zeit in der der HypeTrain bezwungen werden kann begrenzt. Jedes Level muss innerhalb von jeweils fünf Minuten abgeschlossen werden.
-
-Zudem kann der Streamer den Schwierigkeitsgrad des Hypetrains bestimmen. Das bedeutet in diesem Fall wie viele Bits und Subscribtions benötigt werden damit ein Level abgeschlossen wird.
-
-Die Menge um das Event zu triggern kann der Streamer in den Einstellungen selbst festlegen. Dies hat den Vorteil, dass jeder Streamer anhand seiner Reichweite selbst bestimmen kann wann und wie oft der HypeTrain aktiviert werden soll. Passiert dies allerdings zu oft, verliert der HypeTrain seine "Besonderheit" und wird schnell als störend empfunden. Der Streamer muss ihn deshalb mit Bedacht einsetzen.
 
 \begin{figure}[ht]
-\caption{Hypetrain}
+\caption{Hypetrain \parencite{Twitche}}
 \centering
 \includegraphics[width=0.5\textwidth]{twitch_hypetrain}
 \end{figure}
 
-\textbf{Raid}
-Raid ist ein Begriff welcher in Online Rollenspielen entstanden ist. Ein Raid ist wenn eine Gruppe an Spielern gemeinsam eine andere Gruppe an Spielern oder einen Endgegner bekämpfen für den Sie alleine zu schwach wären. Auf Twich ist ein Raid wenn der Streamer am Ende des Streams seine aktuellen Zuschauer auf einen andern Twitch Channel schickt. Als Zuschauer hat man nun das Gefühl an einem gemeinsamen Event teilzunehmen. Hierbei wird das Gemeinschaftsgefühl des vorherigen Streams zusätzlich gestärkt. \parencite{Stephen2020}
+Ein weiteres Event ist der sogenannte Raid. Der Begriff ist in Online Rollenspielen entstanden. Man spricht von einem Raid wenn eine Gruppe an Spielern gemeinsam eine andere Gruppe an Spielern oder einen Endgegner bekämpfen für den Sie alleine zu schwach wären. Auf Twich ist ein Raid wenn der Streamer am Ende des Streams seine aktuellen Zuschauer auf einen andern Twitch Channel schickt. Als Zuschauer hat man nun das Gefühl an einem gemeinsamen Event teilzunehmen. Hierbei wird das Gemeinschaftsgefühl des vorherigen Streams zusätzlich gestärkt. \parencite{Stephen2020}
 
 \section{Gamification}
 \label{chap:gamif}
-Spiele erfreuen sich seit vielen Jahren großer Beliebtheit. Sei es Brettspiele, sportliche Wettbewerbe oder seit der Entwicklung des Computers auch Videospiele. Aufgrund des großen Erfolges von Spielen wurde begonnen dessen Hintergründe zu erforschen. Es wurde begonnen zu analysieren weshalb sie so beliebt sind und was sie so faszinierend und fesselnd macht. \parencite{Prensky2001}
+Spiele erfreuen sich seit vielen Jahren großer Beliebtheit. Sei es Brettspiele, sportliche Wettbewerbe oder seit der Entwicklung des Computers auch Videospiele. Aufgrund des großen Erfolges von Spielen wurde begonnen dessen Hintergründe zu erforschen. Das Ziel ist es herauszufinden weshalb sie so beliebt sind und was sie so faszinierend und fesselnd macht. \parencite{Prensky2001}
 
-Bei diesen Untersuchungen ist man auf eine Erkenntnis gestoßen. Es gibt bestimmt Elemente in Spielen die besonders stark zur Motivation und Faszination eines Spielers beitragen motivieren. Aus dieser Erkenntnis ist die Forschung der Gamification entstanden. Gamification ist ein Begriff der bereits seit einigen Jahren in vielen Bereichen Anwendung findet. Nachdem lange Verwirrung um eine genaue Definition von Gamification bestand definierte \textcite{Deterding2011} es wie folgt: "Gamification is the use of game design elements in non-game contexts". Somit ist Gamification die Anwendung von Elementen aus Spielen in nicht-spiel Umgebungen beziehungsweise Kontexten. 
+Bei diesen Untersuchungen ist man auf eine Erkenntnis gestoßen. Es gibt bestimmte Elemente in Spielen die besonders stark zur Motivation und Faszination eines Spielers beitragen. Aus dieser Erkenntnis ist die Forschung der Gamification entstanden. Gamification ist ein Begriff der bereits seit einigen Jahren in vielen Bereichen Anwendung findet. 
 
-Die eingangs erwähnten Elemente sind unter anderem Punkte, Badges oder Leaderboards, im folgenden auch kurz "PBL" genannt.
+Nachdem lange Verwirrung um eine genaue Definition von Gamification bestand definierte \textcite{Deterding2011} es wie folgt: \glqq Gamification is the use of game design elements in non-game contexts\grqq. Somit ist Gamification die Anwendung von Elementen aus Spielen in nicht-spiel Umgebungen beziehungsweise deren Kontext. Die Eingangs erwähnten Elemente sind unter anderem Punkte, Badges oder Leaderboards. Diese werden auch kurz \glqq PBLs\grqq genannt.
 
-Jedoch besteht auch die Verwirrung, dass angenommen wird, dass das alleinige hinzufügen dieser Elemente bereits Gamification ist. Dies ist jedoch ein Irrglaube. Pointification ist das reine Anwenden von PBLs auf ein System ohne durchdachtes System, in der Hoffnung, dass es den Benutzer motiviert.
+Jedoch wird auch oft fälschlicherweise angenommen, dass das alleinige hinzufügen dieser Elemente bereits Gamification ist. Dabei entsteht eine Verwechslung mit Pointification. Diese ist das reine Anwenden von PBLs auf ein System ohne durchdachtes System, in der Hoffnung, dass es den Benutzer motiviert.
 
 Jedoch ist Gamification viel mehr. Es ist das gezielte ansprechen von Motivationsfaktoren in der menschlichen Psyche
 
 Bei Gamification wird ein besonderes Augenmerk auf den User, dessen Verhalten, Bedürfnisse, Wünsche und Emotionen gelegt. Dieses vorgehen wird "Human-Focused Design" genannt, im Folgenden kurz HFD. Im Gegensatz dazu wird beim Klassischen "Function-Focused Design" der Augenmerkt auf die durchzuführenden Arbeit und die hierfür möglichst effiziente funktionale Lösung gelegt. \parencite{Mechelen2017}
 
-%---- Spielertypen
-Um das HFD erfolgreich einsetzen zu können muss bei der Entwicklung der Gamification Strategie das Entwicklungsteam sich seiner zukünftigen Zielgruppe bewusst sein. Um das zu erleichtern wurden für Gamification die Spieltertypen entwickelt. Hierfür gibt es verschiedenen Modelle.
-
-Über die Spielertypen gibt es verschiedene Frameworks die in verschiedenen Bereichen Anwendung finden. Beispielsweise gibt es die Spielertypen nach Bartels die in vier verschiedene Player aufgeteilt werden. Jedoch ist dieser Ansatz für Rollenspiele spezialisiert. 
+Um das HFD erfolgreich einsetzen zu können muss bei der Entwicklung der Gamification Strategie das Entwicklungsteam sich seiner zukünftigen Zielgruppe bewusst sein. Um das zu erleichtern wurden für Gamification die Spieltertypen entwickelt. Hierfür gibt es verschiedenen Modelle. Diese finden in verschiedenen Bereichen Anwendung. Beispielsweise gibt es die Spielertypen nach Bartels die in vier verschiedene Player aufgeteilt werden. Jedoch ist dieser Ansatz für Rollenspiele spezialisiert. 
 
 Daneben gibts es auch die Spielertypen nach \cite{Marczewski2015} bestehend aus 6 verschiedenen Arten von Usern. 
 
@@ -477,20 +452,18 @@ Trigger, um den User weiter zu motivieren.
 % 
 \chapter{Gamification auf Twitch}
 
-Da Twitch eine Plattform ist welche ursprünglich nur für das Live Streamen von Videospielen gebaut wurde ist es nicht verwunderlich dass diese auch aktiv sehr viel Gamification in ihrer Software  einsetzen. Sowohl die Seite der Zuschauer als auch die Streamer Seite ist mit Elementen aus Spielen übersäht. Zunächst wird die Seite des Streamers beleuchtet. Dieser wird motiviert weiter zu Streamen um neuen Content für Twitch zu produzieren. Danach wird auf die Seite des Zuschauers eingegangen. Dieser soll motiviert werden den Stream weiter zu konsumieren.
+Twitch ist eine Plattform, welche ursprünglich speziell für das Live Streamen von Videospielen gebaut wurde. Somit ist es nicht verwunderlich, dass diese auch aktiv sehr viel Gamification in ihrer Software  einsetzen. Sowohl auf der Seite eines Zuschauers als auch die eines Streamers nutzt Gamification Elemente. Zunächst wird die Seite des Streamers beleuchtet. Dieser wird motiviert weiter zu Streamen um neuen Content für Twitch zu produzieren. Danach wird auf die Seite des Zuschauers eingegangen. Dieser soll motiviert werden den Stream weiter zu konsumieren und den Streamer finanziell zu unterstützen.
 
 \section{Streamer Seite}
-Der Weg auf Twitch ein erfolgreicher Streamer zu werden ist lange und mühselig. Damit die Content Creator auf dem Weg dort hin die Lust nicht verlieren hat Twitch ein Achievement System in seine Seite eingebaut. Dieses System besteht aus vielen kleinen Aufgaben die es zu erreichen gilt. Solche Aufgaben sind zum Beispiel eine bestimmte Anzahl an Followern zu erreichen, eine Anzahl an Tagen zu Streamen, eine Anzahl an Gleichzeitigen Usern im Chat und viele mehr.
+Der Weg auf Twitch ein erfolgreicher Streamer zu werden ist lange und mit viel Arbeit verbunden. Damit die Content Creator auf dem Weg dort hin durchgehen motiviert bleiben hat Twitch ein Achievement System in die Plattform eingebaut. Dieses System besteht aus vielen kleinen Aufgaben die es zu erreichen gilt. Solche Aufgaben sind zum Beispiel eine bestimmte Anzahl an Followern zu erreichen, eine Anzahl an Tagen zu Streamen, eine Anzahl an gleichzeitigen Usern im Chat und viele mehr.
 
 Zudem gibt es auch Meilensteine die man erreichen muss um die in \autoref{chap:grund_twitch} beschriebenen Streamer Status Affiliate und Partner zu erreichen. Wie in \autoref{img:milestones} zu sehen gibt es für beide Status den "Path to Affiliate" und "Path to Partner".
 
-Die drei Stati auf Twitch sind "Streamer", "Affiliate" und "Partner".
-
 \begin{figure}[ht]
-\caption{Twitch Meilensteine für Streamer}
+\caption{Twitch Meilensteine für Streamer \parencite{Twitchb}}
 \label{img:milestones}
 \centering
-\includegraphics[width=0.6\textwidth]{twitch_milestones}
+\includegraphics[width=\textwidth]{twitch_achievments}
 \end{figure}
 Da diese Gamification Elemente aber nur für den Streamer selbst sichtbar sind können sie in einer Marketing Kampagne nicht angewandt werden. Somit werden sie für diese Arbeit als nicht relevant definiert.
 
@@ -549,7 +522,11 @@ Ist man selbst ein Streamer erhält man den Broadcaster badge. Moderator bekomme
 \textbf{Loyalty Badges}
 Die sogenannten Loyalty Badges oder Subsciber Badges bekommt ein User welcher eine Subscibtion eines Streamers kauft. Da jeder Streamer einen anderen Stil hat kann auch das Aussehen der Badges vom Streamer selbst definiert werden. So hat ein Streamer der eher Militärsimulationen spielt auch Militärische Abzeichen als Badges. Ein Musikstreamer eher etwas Musik relatedes wie Schallplatten, Noten, etc.
 
+Das erzeugt ein starkes Gemeinschafts bzw. Community Gefühl bei allen Badge-Besitzern. 
+
 Oder auch besondere insight: wenn der Streamer zum Beispiel großer Fan von Pizza ist und alle seine Zuschauer das kennen können auch die Badges in Form einer Pizza sein.
+
+Hat ein User schon mehrere Monate in Folge eine Subscription abgeschlossen bekommt dieser neues Badges. Diese sollen wie ein Abzeichen den Rang eines Unterstützers darstellen.  Hat man eine Abo eines höheren Tiers so wird dem Badge noch ein zusätzlicher Flair verliehen. Ein Flair ist ein zusätzliches Symbol oder Grafik welche auf das Badge gelegt wird. Tier 2 und Tier 3 haben in der Regel unterschiedliche Flairs.
 
 \begin{figure}[ht]
 \caption{Loyalty Badges}

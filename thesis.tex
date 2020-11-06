@@ -33,6 +33,7 @@
 \usepackage{soul}% for underlines
 %\usepackage[table]{xcolor} % for cell colors
 \usepackage{changepage,threeparttable} % for wide tables
+\usepackage[acronym]{glossaries} % AK Verzeichnis
 \bibliography{referencesmendsync}
  
 %%%%%%%%%%%%%%%%%%%
@@ -172,6 +173,16 @@ pdfkeywords={Gamification;Marketing;Twitch;Livestreaming;Music}
   \literal{nodate}
 }
 
+\makeglossaries
+\newacronym{hfd}{HFD}{Human-Focused  Design}
+\newacronym{pbls}{PBLs}{Punkte, Badges oder Leaderboards}
+\newacronym{obs}{OBS}{Open Broadcaster Software}
+\newacronym{rtmp}{RTMP}{Real Time Messaging Protocol}
+\newacronym{gdf}{GDF}{Gamification Design Framework}
+\newacronym{gmc}{GMC}{Gamification Model Canvas}
+\newacronym{osd}{OSD}{Octalysis Strategy Dashboads}
+\newacronym{npc}{NPC}{Non-player character}
+
 \begin{document}
 \frontmatter
 \titlehead{%  {\centering Seitenkopf}
@@ -274,50 +285,28 @@ Twitch ist eine Live-Web-Video-Plattform, die von Amazon betrieben wird. Im Mär
 
 Twitch entstand als Nebenprojekt aus der Plattform Justin.tv, die im Jahr 2007 gegründet wurde. Justin.tv bot jedem Menschen mit Internetzugang die Möglichkeit kostenlos eigene Liveshows ins Internet zu streamen, sogenannte \glqq Broadcasts\grqq{}. Aufgrund der hohen Anfrage von Videospiel-Content wurde eine zweite Seite, dediziert für Videospiele, gestartet. Sie ging unter dem heute bekannten Namen Twitch im Jahr 2011 ans Netz. Später wurde auch der Name der Firma in Twitch umbenannt und Justin.tv wurde vom Netz genommen, da sich die Firma nur auf Twitch konzentrieren wollte. Im Jahr 2014 wurde Twitch von Amazon gekauft. \parencite{Ionos2018}
 
-Auf Twitch gibt es die sogenannten Channels (dt. Kanäle). Jedes Twitch-Mitglied hat einen eigenen Channel über den es seine Livestreams anderen Mitgliedern zur Verfügung stellen kann. Eine Person die einen solchen Livestream bereitstellt wird auch \glqq Streamerin und Streamer\grqq{}, \glqq Broadcasterin und Broadcaster\grqq{} oder \glqq Content-Creator\grqq{} genannt. Findet ein Person einen anderen Channel interessant und möchte benachrichtigt werden, sobald dieser Live geht, so kann sie diesem folgen. Jeder Channel hat eine eigene Seite und Internetadresse, auf der der Channel-Betreiber in der \glqq About\grqq{}-Sektion Texte und Bilder einbauen kann. Diese Sektion wird in der Regel für Infos über die Streamerinnen und Streamer als Personen,  Infos und Links von Werbepartnern oder Links zu anderen Auftritten im Internet genutzt. Wird über den Channel gerade ein Livestream übertragen, so wird das Videobild des Livestreams wie in \autoref{img:twitch_channel} groß und zentral auf dem Channel angezeigt. Auf der linken Seite im Bild ist eine Liste mit Channels zu sehen denen der gerade angemeldete Account folgt. Hierbei werden Channels, die gerade live sind, ganz oben in der Liste, zusammen mit ihren aktuellen Zuschauerzahlen, angezeigt.
+Auf Twitch gibt es die sogenannten \glqq Channels\grqq{}. Jedes Twitch-Mitglied hat einen eigenen Channel über den es seine Livestreams anderen Mitgliedern zur Verfügung stellen kann. Eine Person die einen solchen Livestream bereitstellt wird auch \glqq Streamerin und Streamer\grqq{}, \glqq Broadcasterin und Broadcaster\grqq{} oder \glqq Content-Creator\grqq{} genannt. Findet ein Person einen anderen Channel interessant und möchte benachrichtigt werden, sobald dieser Live geht, so kann sie diesem folgen. Jeder Channel hat eine eigene Seite und Internetadresse, auf der der Channel-Betreiber in der \glqq About\grqq{}-Sektion Texte und Bilder einbauen kann. Diese Sektion wird für Infos über die Streamerinnen und Streamer als Personen, Infos und Links von Werbepartnern oder Links zu anderen Auftritten im Internet genutzt. Wird über den Channel gerade ein Livestream übertragen, so wird das Videobild des Livestreams wie in \autoref{img:twitch_channel} groß und zentral auf dem Channel angezeigt. Auf der linken Seite im Bild ist eine Liste mit Channels zu sehen denen der gerade angemeldete Account folgt. Hierbei werden Channels, die gerade live sind, ganz oben in der Liste, zusammen mit ihren aktuellen Zuschauerzahlen, angezeigt.
 
 Die Besonderheit von Twitch ist die Kombination aus High-Fidelity-Video-Content und textbasierter Kommunikation über einen Chat \parencite{Hamilton2014}. Hierbei haben Zuschauerinnen und Zuschauer in einem Livestream die Möglichkeit in Echtzeit untereinander und mit den Streamenden zu kommunizieren. Der Chat wird, wie in \autoref{img:twitch_channel} zu sehen, rechts neben dem Videobild des Livestreams angezeigt. 
 
-Die wohl charakteristischsten Elemente im Chat sind die sogenannten Emotes. Dies sind kleine Bildzeichen, die im Live-Chat eingesetzt werden können, um mehr Emotionen im Text auszudrücken. Sie sind Kernbestandteil der Sprache auf Twitch. Die sogenannten Global-Emotes sind für alle Mitglieder gleichermaßen verfügbar. Es gibt aber auch Emotes die erst freischalten werden muss. Das beliebteste Global-Emote ist \glqq Kappa\grqq{} (\inlineimg{kappa}). Es zeigt die schwarz-weiß Abbildung des Gesichts eines ehemaligen Twitch Entwicklers. \parencite{Barbieri2018}
+Die wohl charakteristischsten Elemente im Chat sind die sogenannten \glqq Emotes\grqq{}. Dies sind kleine Bildzeichen, die im Live-Chat eingesetzt werden können, um mehr Emotionen im Text auszudrücken. Sie sind Kernbestandteil der Sprache auf Twitch. Die sogenannten \glqq Global-Emotes\grqq{} sind für alle Mitglieder gleichermaßen verfügbar. Es gibt aber auch Emotes die erst freischalten werden muss. Das beliebteste Global-Emote ist \glqq Kappa\grqq{} (\inlineimg{kappa}). Es zeigt die schwarz-weiß Abbildung des Gesichts eines ehemaligen Twitch Entwicklers. \parencite{Barbieri2018}
 
 \begin{figure}[ht]
-\caption{Screenshot eines Twitch Livestreams. selbst aufgenommen von \parencite{Twitchf}}
+\caption{Screenshot eines Twitch Livestreams von \parencite{Twitchf}}
 \label{img:twitch_channel}
 \centering
 \includegraphics[width=\textwidth]{twitch_live_screen}
 \end{figure}
 
-Jeder Livestream wird von den Streamerinnen und Streamern einer Kategorie zugeordnet. Sie spiegelt dessen Inhalt wider. Diese erleichtern für die Konsumierenden das Auffinden von interessanten Inhalten. So werden auf der Startseite Live-Channels angezeigt, die gerade Kategorien streamen, die den Interessen des angemeldeten Accounts entsprechen. Zudem bietet Twitch über die \glqq Browse\grqq{}-Seite die Möglichkeit spezifisch nach Kategorien zu filtern. Der größte Teil der Kategorie sind in der Regel Videospiele. Die laut Statista beliebtesten Spiele aller Zeiten auf Twitch können der \autoref{tab:twitchStat2020} entnommen werden. So ist League of Legends, mit 33,25 Milliarden Aufrufen, das beliebteste Spiel der Plattform. \parencite{Statista2020}
+Jeder Livestream wird von den Streamerinnen und Streamern einer Kategorie zugeordnet. Sie spiegelt dessen Inhalt wider. Diese erleichtern das Auffinden von interessanten Inhalten für die Konsumierenden. So werden auf der Startseite Live-Channels angezeigt, die gerade Kategorien streamen, die den Interessen des angemeldeten Accounts entsprechen. Zudem bietet Twitch über die \glqq Browse\grqq{}-Seite die Möglichkeit spezifisch nach Kategorien zu filtern. 
 
-\begin{table}[!htp]\centering
-\caption{Beliebteste Spiele aller Zeiten auf Twitch\parencite{Statista2020}}
-\label{tab:twitchStat2020}
-\scriptsize
-\begin{tabular}{lrr}\toprule
-\multicolumn{2}{c}{\textbf{Twitch most popular games by all time viewers 2020}} \\\midrule
-\multicolumn{2}{c}{Most popular games on Twitch worldwide as of September 2020, by all time views (in billions)} \\
-& \\
-League of Legends &33,26 \\
-Fortnite &19,33 \\
-Counter-Strike: Global Offensive &15,1 \\
-DOTA 2 &14,4 \\
-Hearthstone &11,2 \\
-Grand Theft Auto V &9,02 \\
-World of Warcraft &7,46 \\
-Overwatch &6,78 \\
-Minecraft &4,16 \\
-Tom Clancy's Rainbow Six: Siege &2,67 \\
-\bottomrule
-\end{tabular}
-\end{table}
+Wie bereits erwähnt, wurde zu Beginn von Twitch lediglich Gaming-Content gestreamt. Es ist aber ein deutlicher Trend zu erkennen, dass auch Nicht-Gaming-Content immer mehr an Beliebtheit gewinnt. So wurde 2016 die Kategorie \glqq in real life\grqq{} (IRL) eingeführt und diese im Jahr 2018 in viele neue Unterkategorien aufgeteilt. Eine dieser Unterkategorien ist \glqq Just Chatting\grqq{}. In dieser unterhalten sich die Streamenden mit den Zuschauerinnen und Zuschauern über alle möglichen Themen, schauen gemeinsam Videos auf YouTube oder bewerten auch andere Streamerinnen und Streamer um nur ein paar Beispiele zu nennen. \parencite{DAnastasio2020} Sie erreichte im Dezember 2019 das erste mal den Platz eins in der Liste der meistgeschauten Kategorien auf Twitch. Mit 80,9 Mio Stunden war sie 6 Mio Stunden vor \glqq League of Legends \grqq{} und 22 Mio Stunden vor \glqq Fortnite\grqq{} den bis dato meistgestreamten Kategorien auf Twitch \parencite{Yosilewitz2020}. Auch Kategorien wie \glqq Music \& Performing Arts\grqq{}, \glqq Art\grqq{} oder \glqq Food \& Drink\grqq{} sind aus IRL hervorgegangen. \parencite{Alexander2018}
 
-Wie bereits erwähnt, wurde zu Beginn von Twitch lediglich Gaming-Content gestreamt. Seit der Übernahme von Amazon ist ein deutlicher Trend zu erkennen, dass auch andere Kategorien eingeführt und beworben werden. Unter anderem \glqq Just Chatting\grqq{}, bei dem sich die Streamenden mit den Zuschauerinnen und Zuschauern über alle möglichen Themen unterhält, gemeinsam Videos auf YouTube anschauen oder auch andere Streamerinnen und Streamer bewertet. Die Bandbreite der Kategorien reicht bis hin zu Kochen, Musik oder auch Do-It-Yourself. \parencite{Alexander2018}
+Die Plattform ist für beide Seiten kostenlos, sowohl für die Konsumierenden als auch für die Streamenden. Twitch finanziert sich unter anderem durch Werbung und einem optionalen Premium-Abonnement namens \glqq Twitch Turbo\grqq{}. \parencite{Iqbal2020} Für das Konsumieren der Inhalte der Plattform wird keine Account benötigt. Möchte eine Person aber an einer Chat-Diskussion teilnehmen, einem Channel folgen oder selbst streamen muss diese sich einen Account erstellen und mit diesem angemeldet sein.
 
-Die Plattform ist für beide Seiten kostenlos, sowohl für die Seite der Konsumierenden als auch für die der Streamenden. Für das Konsumieren der Inhalte der Plattform wird keine Account benötigt. Möchte eine Person aber an einer Chat-Diskussion teilnehmen, einem Channel folgen oder selbst streamen muss diese sich einen Account erstellen und mit diesem angemeldet sein.
+Das Streamen wird von den meisten Streamerinnen und Streamern zu Beginn nur als Hobby angesehen. Damit es auch finanziell lukrativ wird, hat Twitch die Möglichkeit eingebaut, dass das Publikum die Streamenden auch finanziell unterstützen kann. Hierfür müssen die Streamenden den sogenannten \glqq Affiliate\grqq{}- oder den \glqq Partner\grqq{}-Status erreichen. Diese Status ermöglichen den Streamenden die sogenannten \glqq Subscriptions\grqq{} und \glqq Bits\grqq{} zu aktivieren. 
 
-Das Streamen wird von den meisten Streamerinnen und Streamern zu Beginn nur als Hobby angesehen. Damit das Streamen auch finanziell lukrativ wird hat Twitch die Möglichkeit eingebaut, dass das Publikum die Streamenden auch finanziell unterstützen kann. Hierfür müssen die Streamenden den sogenannten \glqq Affiliate\grqq{}- oder den \glqq Partner\grqq{}-Status erreichen. Diese Status ermöglichen den Streamenden die sogenannten Subscriptions (dt. Abonnements) und Bits zu aktivieren. 
-
-Die Subscriptions sind eine Möglichkeit eine Streamerin oder einen Streamer auf monatlicher Basis finanziell zu unterstützen. Es gibt drei Stufen, die sogenannten \glqq Tiers\grqq{}. Die Preise der jeweiligen Tiers können aus \autoref{img:tierPreise} entnommen werden. Die Streamenden erhält hiervon als Affiliate jeweils 50\%, die andere Hälfte behält Twitch. Als Partner liegt die Teilung bei 50/50, 60/40 und 70/30 für Tier 1, 2 und 3. Durch die Zugehörigkeit von Twitch zu Amazon haben Amazon Prime-Mitglieder Vorteile. Hat ein Amazon Prime-Mitglied seinen Account mit Twitch verknüpft, so hat es die Möglichkeit monatlich eine Tier-1-Subscription ohne Mehrkosten bei einer Streamerin oder einem Streamer seiner Wahl abzuschließen \parencite{Walter2020}. Zudem erhält das Mitglied ein sogenanntes Chat-Badge. Dies ist ein kleines Symbol, das im Chat links neben seinem Namen angezeigt wird. Im Fall von Prime-Gaming ist es eine blau-weiße Krone.
+Die Subscriptions sind eine Möglichkeit eine Streamerin oder einen Streamer auf monatlicher Basis finanziell zu unterstützen. Es gibt drei Stufen, die sogenannten \glqq Tiers\grqq{}. Die Preise der jeweiligen Tiers können aus \autoref{img:tierPreise} entnommen werden. Die Streamenden erhält hiervon als Affiliate jeweils 50\%, die andere Hälfte behält Twitch. Als Partner kann diese Teilung auch zugunsten des Content-Creators verändert werden, sodass manche Streamer sogar bis zu 100\% des Preises ausgezahlt bekommen. \parencite{Stephenson2020} Durch die Zugehörigkeit von Twitch zu Amazon haben Amazon Prime-Mitglieder Vorteile. Hat ein Amazon Prime-Mitglied seinen Account mit Twitch verknüpft, so hat es die Möglichkeit monatlich eine Tier-1-Subscription ohne Mehrkosten bei einer Streamerin oder einem Streamer seiner Wahl abzuschließen. Amazon nennt diese Aktion \glqq Prime-Gaming\grqq{} \parencite{Walter2020}. Nimmt ein Mitglied daran teil so erhält es ein sogenanntes \glqq Chat-Badge\grqq{}. Dies ist ein kleines Symbol, das im Chat links neben seinem Namen angezeigt wird. Im Fall von Prime-Gaming ist es eine blau-weiße Krone.
 
 \begin{figure}[ht]
 \caption{Twitch Subscibtions \parencite{Twitchd}}
@@ -326,7 +315,7 @@ Die Subscriptions sind eine Möglichkeit eine Streamerin oder einen Streamer auf
 \includegraphics[width=0.7\textwidth]{twitch_sub}
 \end{figure}
 
-Nach dem Kauf einer Subscription ist diese, zusammen mit ihren Vorteilen, für einen Monat aktiv. Durch das Subscriben kann der Stream ohne Werbeunterbrechungen geschaut werden. Zudem werden die sogenannten Channel-Emotes freigeschalten. Diese werden von den Streamenden selbst festgelegt um sie individuell an den Channel anzupassen. Jede Subscriberin und jeder Subscriber schaltet das Channel-Badge frei. Haben diese schon mehrmals subscribed so kann sich das Badge je nach Channel und Dauer verändern. Hierdurch wird im Chat direkt sichtbar wer den Channel unterstützt. Diese Badges sind ebenfalls in jedem Channel individuell angepasst.
+Nach dem Kauf einer Subscription ist diese, zusammen mit ihren Vorteilen, für einen Monat aktiv. Durch das Subscriben kann der Stream ohne Werbeunterbrechungen geschaut werden. Zudem werden die sogenannten \glqq Channel-Emotes\grqq{} freigeschalten. Diese werden von den Streamenden selbst festgelegt um sie individuell an den Channel anzupassen. Jede Subscriberin und jeder Subscriber schaltet das Channel-Badge frei. Haben diese schon mehre Monate eine Subscription abgeschlossen, so kann sich das Badge je nach Channel und Dauer verändern. Hierdurch wird im Chat direkt sichtbar wer den Channel unterstützt. Diese Badges sind ebenfalls in jedem Channel individuell angepasst.
 
 Des weiteren kann im Fall eines sehr aktiven und somit unübersichtlichen Chats der \glqq Follower-Only\grqq{} oder \glqq Subscriber-Only\grqq{} Modus aktiviert werden. In diesen Modi ist es nur folgenden bzw. subscribenden Mitgliedern möglich in den Chat zu schreiben. Somit ist ein weiterer Vorteil des Subscribens auch in diesem Modus in den Chat schreiben zu können.
 
@@ -360,25 +349,27 @@ Bei Aktivierung des HypeTrains wird oberhalb des Chats ein Fortschrittsbalken mi
 \includegraphics[width=0.7\textwidth]{twitch_hypetrain}
 \end{figure}
 
-Ein weiteres Event ist der sogenannte \glqq Raid\grqq{}. Der Begriff ist in Online-Rollenspielen entstanden. Es wird von einem Raid gesprochen, wenn eine Gruppe von Spielerinnen und Spielern gemeinsam ein Level bestreiten, für das sie alleine zu schwach wären. Auf Twitch ist ein Raid, wenn die Streamenden am Ende eines Streams das verbliebene Publikum an einen andern Twitch-Channel übergeben. Die Zuschauerinnen und Zuschauer haben nun das Gefühl an einem gemeinsamen Event teilzunehmen. Hierbei wird das Gemeinschaftsgefühl des vorherigen Streams zusätzlich gestärkt. \parencite{Stephen2020}
+Ein weiteres Event ist der sogenannte \glqq Raid\grqq{}. Der Begriff ist in Online-Rollenspielen entstanden. Es wird von einem Raid gesprochen, wenn eine Gruppe von Spielerinnen und Spielern gemeinsam ein Level bestreiten, für das sie alleine nicht stark genug wären. 
+
+Auf Twitch ist ein Raid, wenn die Streamenden am Ende eines Streams das verbliebene Publikum an einen andern Twitch-Channel übergeben. Die Zuschauerinnen und Zuschauer haben nun das Gefühl an einem gemeinsamen Event teilzunehmen. Raids werden von Streamerinnen und Streamern genutzt, um eine Community aufzubauen oder andere, in der Regel kleinere Streamer, zu unterstützen. \parencite{Stephen2020}
 
 \section{Gamification}
 \label{chap:gamif}
-Gamification ist ein Begriff der im Verlauf der letzten Jahre immer mehr an Aufmerksamkeit gewonnen hat. Das Konzept dahinter gibt es schon seit es den Menschen gibt, der Begriff existiert aber erst seit 2002. In diesem Konzept geht es darum eine Aufgabe die für einen Benutzer eher uninteressant und langweilig ist, in eine interessante Aufgabe zu verändern. Da Spiele die Spielenden schon von Natur aus motivieren, wird mit Gamification versucht, die motivierenden Spiel-Elemente aus den Spielen zu extrahieren und die uninteressanten, Nicht-Spiel-Aufgaben damit motivierend zu gestalten. \parencite{Marczewski2013}
+Gamification ist ein Begriff der im Verlauf der letzten Jahre immer mehr an Aufmerksamkeit gewonnen hat. Der Begriff existiert seit 2002 und wurde durch Nick Pelling das erste mal verwendet \parencite{Pelling2011}. In diesem Konzept geht es darum eine Aufgabe die für einen Benutzer eher uninteressant und langweilig ist, in eine interessante Aufgabe zu verändern. Da Spiele die Spielenden schon von Natur aus motivieren, wird mit Gamification versucht, die motivierenden Spiel-Elemente aus den Spielen zu extrahieren und die uninteressanten Aufgaben damit motivierend zu gestalten. \parencite{Marczewski2013}
 
-Nachdem lange Verwirrung um eine genaue Definition von Gamification bestand, definierte es \cite{Deterding2011} wie folgt: \glqq Gamification is the use of game design elements in non-game contexts\grqq{}. Somit ist Gamification die Anwendung von Elementen aus Spielen in \glqq Nicht-Spiel-Umgebungen\grqq{}. Die eingangs erwähnten Elemente sind unter anderem Punkte, Badges oder Leaderboards, im folgenden kurz \glqq PBLs\grqq{}. \parencite{Deterding2011}
+Nachdem lange Verwirrung um eine genaue Definition von Gamification bestand, definierte es \cite{Deterding2011} wie folgt: \glqq Gamification is the use of game design elements in non-game contexts\grqq{}. Somit ist Gamification die Anwendung von Elementen aus Spielen in \glqq Nicht-Spiel-Umgebungen\grqq{}. Beispiele für Elemente sind unter anderem \acrfull{pbls}. \parencite{Deterding2011}
 
-Es wird fälschlicherweise oft angenommen, dass das alleinige Hinzufügen von Punkten bereits Gamification ist. Dabei entsteht eine Verwechslung mit \glqq Pointsification\grqq{}. Dies ist das reine Anwenden von PBLs auf ein System ohne tieferes Konzept, in der Hoffnung, dass es eine positive Auswirkung auf das Verhalten der Zielgruppe hat. So werden bei Pointsification beispielsweise für das Durchführen von Aufgaben Punkte vergeben, die Benutzerinnen und Benutzer anhand ihres Punktestandes in einem Leaderboard verglichen. Nach dem Erreichen einer bestimmten Punktzahl wird ihnen ein Zertifikat vergeben. \parencite{Kifetew2017}
+Es wird fälschlicherweise oft angenommen, dass das alleinige Hinzufügen von Punkten bereits Gamification ist. Dabei entsteht eine Verwechslung mit \glqq Pointsification\grqq{}. Dies ist das reine Anwenden von \acrshort{pbls} auf ein System ohne tieferes Konzept, in der Hoffnung, dass es eine positive Auswirkung auf das Verhalten der Zielgruppe hat. So werden bei Pointsification beispielsweise für das Durchführen von Aufgaben Punkte vergeben, die Benutzerinnen und Benutzer anhand ihres Punktestandes in einem Leaderboard verglichen. Nach dem Erreichen einer bestimmten Punktzahl wird ihnen ein Zertifikat vergeben. \parencite{Kifetew2017}
 
-Gamification ist viel mehr. Es ist das gezielte Ansprechen von Motivationsfaktoren in der menschlichen Psyche. Deshalb wird bei Gamification ein besonderes Augenmerk auf den Menschen, dessen Verhalten, Bedürfnisse, Wünsche und Emotionen gelegt. Dieses Vorgehen wird \glqq Human-Focused Design\grqq{} genannt, im Folgenden kurz HFD. Im Gegensatz dazu wird beim klassischen \glqq Function-Focused Design\grqq{} das Augenmerk auf die durchzuführende Arbeit und die hierfür möglichst effiziente funktionale Lösung gelegt. \parencite{Mechelen2017} In den nachfolgenden Unterkapiteln werden hilfreiche Werkzeuge vorgestellt, mit denen die Umsetzung eines HFD-Prozesses erleichtert wird. Diese Werkzeuge sind das Konzept von Spielertypen, um die Zielgruppe besser zu verstehen, Motivationsfaktoren der menschlichen Psyche und ein Design Framework, um passende Gamification-Elemente für die Motivationsfaktoren zu finden.
+Gamification ist viel mehr. Es ist das gezielte Ansprechen von Motivationsfaktoren in der menschlichen Psyche. Deshalb wird bei Gamification ein besonderes Augenmerk auf den Menschen, dessen Verhalten, Bedürfnisse, Wünsche und Emotionen gelegt. Dieses Vorgehen wird \acrfull{hfd} genannt. Im Gegensatz dazu wird beim klassischen \glqq Function-Focused Design\grqq{} das Augenmerk auf die durchzuführende Arbeit und die hierfür möglichst effiziente funktionale Lösung gelegt. \parencite{Mechelen2017} In den nachfolgenden Unterkapiteln werden hilfreiche Werkzeuge vorgestellt, mit denen die Umsetzung eines \acrshort{hfd}-Prozesses erleichtert wird. Diese Werkzeuge sind das Konzept von Spielertypen, um die Zielgruppe besser zu verstehen, Motivationsfaktoren der menschlichen Psyche, um zu verstehen was Menschen motiviert und ein Design Framework, um passende Gamification-Elemente zu finden.
 
 \subsection{Spielertypen}
 \label{chap:playertypes}
-Um das HFD erfolgreich einsetzen zu können muss sich bei der Entwicklung der Gamification-Strategie das Entwicklungsteam der Zielgruppe bewusst sein. Zur Erleichterung kann in Gamification auf das Konzept von Spielertypen zurückgegriffen werden. Diese beschreiben die verschiedenen Verhaltensmuster von Menschen und ordnen sie bestimmten Kategorien bzw. Typen zu. \parencite{Chou2017,Bartle1996}
+Um das \acrshort{hfd} erfolgreich einsetzen zu können muss sich bei der Entwicklung der Gamification-Strategie das Entwicklungsteam der Zielgruppe bewusst sein. Zur Erleichterung kann in Gamification auf das Konzept von Spielertypen zurückgegriffen werden. Diese beschreiben die verschiedenen Verhaltensmuster von Menschen und ordnen sie bestimmten Kategorien bzw. Typen zu. \parencite{Chou2017,Bartle1996}
 
-Hierbei können verschiedenen Modelle verwendet werden, die in verschiedenen Bereichen Anwendung finden. Beispielsweise gibt es die Spielertypen nach Bartels, die in vier verschiedene Player aufgeteilt werden. \parencite{Bartle1996}  Jedoch ist dieser Ansatz für Rollenspiele entwickelt worden und deshalb hier nicht anwendbar. Besser sind die Spielertypen nach Marczewski, bestehend aus 6 verschiedenen Arten von Spielern. \parencite{Marczewski2015}
+Hierbei können verschiedenen Modelle verwendet werden, die in verschiedenen Bereichen Anwendung finden. Beispielsweise gibt es die Spielertypen nach Bartels, die in vier verschiedene Typen aufgeteilt werden. \parencite{Bartle1996}  Jedoch ist dieser Ansatz für Rollenspiele entwickelt worden und deshalb hier nicht anwendbar. Nach eigener Aussage sind die Spielertypen nach Marczewski besser. Sie bestehen aus 6 verschiedenen Arten von Spielern. \parencite{Marczewski2015}
 
-Die verschiedenen Spielertypen nach Marczewski können der \autoref{img:hexad} entnommen werden. Der äußere, grüne Bereich, stellt die Spielertypen dar, wobei der innere, rote Bereich, die dazugehörigen Motivationsfaktoren des Typen sind. So ist der \glqq Socializer\grqq{} durch die Verbundenheit zu anderen Menschen und der \glqq Free Spirit\grqq{} durch möglichst viel Autonomie und kreativer Freiheit motiviert. Allerdings kann man einen Menschen nicht nur einem Typen zuordnen. Vielmehr hat jeder Mensch auch jeden Typen mit unterschiedlicher Ausprägung in sich. Jeder Typ reagiert auf die verschiedenen PBLs unterschiedlich stark. \parencite{Marczewski2015}
+Die verschiedenen Spielertypen nach Marczewski können der \autoref{img:hexad} entnommen werden. Der äußere, grüne Bereich, stellt die Spielertypen dar, wobei der innere, rote Bereich, die dazugehörigen Motivationsfaktoren des Typen sind. So ist der \glqq Socializer\grqq{} durch die Verbundenheit zu anderen Menschen und der \glqq Free Spirit\grqq{} durch möglichst viel Autonomie und kreativer Freiheit motiviert. Allerdings kann man einen Menschen nicht nur einem Typen zuordnen. Vielmehr hat jeder Mensch auch jeden Typen mit unterschiedlicher Ausprägung in sich. Jeder Typ reagiert auf die verschiedenen \acrshort{pbls} unterschiedlich stark. \parencite{Marczewski2015}
 
 \begin{figure}[ht]
 \caption{Gamification User Types Hexad von Marczewski \parencite{Marczewski2016}}
@@ -390,7 +381,7 @@ Die verschiedenen Spielertypen nach Marczewski können der \autoref{img:hexad} e
 \subsection{Motivationsfaktoren}
 \label{chap:motfak}
 
-Um auch die Motivationsfaktoren besser zu verstehen wurden hierfür ebenfalls verschiedene Frameworks entwickelt. Eines davon ist das \glqq Octalysis Framework\grqq{} von YouKai Chou. Dieses beschreibt die Motivation des Menschen anhand acht verschiedener Teilbereiche. Sie werden in dem Framework auch \glqq Core Drives\grqq{} genannt. Die acht verschiedenen Core Drives können der \autoref{img:core_drives} entnommen werden und werden im Folgenden kurz erklärt.
+Um auch die Motivationsfaktoren besser zu verstehen wurden hierfür ebenfalls verschiedene Frameworks entwickelt. Eines davon ist das \glqq Octalysis Framework\grqq{} von YouKai Chou. Dieses beschreibt die Motivation des Menschen anhand acht verschiedener Teilbereiche. Sie werden in dem Framework auch \glqq Core Drives\grqq{} genannt. Die acht verschiedenen Core Drives können der \autoref{img:core_drives} entnommen werden.
 
 \begin{figure}[ht]
 \caption{Octalysis eight core drives \parencite[p.~23]{Chou2015}}
@@ -403,7 +394,7 @@ Der erste Core Drive ist \glqq Epic Meaning \& Calling\grqq{} (dt. Höhere Bedeu
 
 Der zweite Core Drive ist \glqq Development \& Acomplishment\grqq{} (dt. Entwicklung / Fortschritt \& Errungenschaften). Hierbei ist es wichtig Menschen vor eine Herausforderung zu stellen. Werden diese geschafft, so bekommt er das Gefühl, dass er stolz auf sich sein kann. Das menschliche Gehirn ist darauf ausgelegt belohnt zu werden. Diese Belohnung erhält er in visueller Form, indem ein Fortschritt angezeigt wird oder indirekt in dem er fühlt, dass seine eigene Erfahrung wächst. Dieser Core Drive ist der meist genutzte in der Gamification Industrie, da er sich auch am einfachsten implementieren lässt.\parencite[88\psqq]{Chou2015}
 
-\glqq Empowerment of Creativity \& Feedback\grqq{} (dt. Förderung der Kreativität \& Feedback) ist der dritte Core Drive. Es spricht besondere Eigenschaften des Menschen an, wie zum Beispiel den Drang Neues zu lernen, seinen Horizont zu erweitern oder neue Dinge zu erfinden. Ein Beispiel hierfür ist das Spiel mit den bunten Bausteinen, Lego. \parencite[123\psqq]{Chou2015}
+\glqq Empowerment of Creativity \& Feedback\grqq{} (dt. Förderung der Kreativität \& Feedback) ist der dritte Core Drive. Er spricht besondere Eigenschaften des Menschen an, wie zum Beispiel den Drang Neues zu lernen, seinen Horizont zu erweitern oder neue Dinge zu erfinden. Ein Beispiel hierfür ist das Spiel mit den bunten Bausteinen, Lego. \parencite[123\psqq]{Chou2015}
 
 Das vierte Core Drive \glqq Ownership \& Possession\grqq{} (dt. Eigentum \& Besitz) funktioniert nach einem einfachen Prinzip. Hat ein Mensch von etwas Besitz ergriffen, möchte er davon nicht mehr loslassen, sondern vielmehr es verbessern und daraus das Beste herausholen. Hierbei spielen Elemente wie digitale Währungen oder Besitztümer eine große Rolle. Es besteht eine große Wahrscheinlichkeit, dass Menschen dort automatisch versuchen einen virtuellen Wohlstand aufzubauen. Auch die Möglichkeit der Individualisierung spielen hier eine große Rolle. \parencite[161\psqq]{Chou2015}
 
@@ -428,13 +419,15 @@ Die acht verschiedenen Core Drives werden in \glqq Left\grqq{}- oder \glqq Right
 \includegraphics[width=\textwidth]{gamif_oct_left_right_black_white}
 \end{figure}
 
-Das Ziel dieser Motivationsfaktoren ist es, eine Aussage darüber zu treffen, wie ausgeglichen die Implementierung von Gamification in einem System ist. Abenfalls kann eine Aussage darüber getroffen werden, welche Core Drive nachgebessert werden müssen, da sie noch nicht ausgeprägt genug sind. Es ist nicht zwingen notwendig, dass alle Core Drives gleichermaßen ausgeprägt sind. Viel wichtiger ist es, dass das Verhältnis zwischen \glqq Left\grqq{} und \glqq Right Brain\grqq{} als auch von \glqq White Hat\grqq{} und \glqq Black Hat\grqq{}-Gamification ausgeglichen ist.\parencite[342\psqq]{Chou2015}
+Das Ziel dieser Motivationsfaktoren ist es, eine Aussage darüber zu treffen, wie ausgeglichen die Implementierung von Gamification in einem System ist. Ebenfalls kann eine Aussage darüber getroffen werden, welche Core Drive nachgebessert werden müssen, da sie noch nicht ausgeprägt genug sind. Es ist nicht zwingen notwendig, dass alle Core Drives gleichermaßen ausgeprägt sind. Viel wichtiger ist es, dass das Verhältnis zwischen \glqq Left\grqq{} und \glqq Right Brain\grqq{} als auch von \glqq White Hat\grqq{} und \glqq Black Hat\grqq{}-Gamification ausgeglichen ist.\parencite[342\psqq]{Chou2015}
 
 \subsection{Design Framework }
 \label{chap:des_fram}
-Mit der Kenntnis der Motivationsfaktoren wird nun deren Anwendung näher erläutert. Benötigt wird hierfür ein \glqq Gamification Design Framework\grqq{} (GDF). Es gibt beispielsweise das \glqq Gamification Model Canvas\grqq{} (GMC), das in acht Schritte unterteilt ist. Es baut auf dem \glqq MDA game design framework\grqq{} und \glqq Business Model Canvas\grqq{} auf. \parencite{Baldeon2016} In dieser Arbeit wird jedoch auf das \glqq Octalysis Strategy Dashboads\grqq{} (OSD) gesetzt, da dieses ebenfalls von YouKai Chou entwickelt wurde, um auf den acht Core Drives aufzubauen.  Das Ziel des OSD ist es herauszufinden, welche Gamification-Elemente eingesetzt werden müssen, um einen Menschen zu einem festgelegtem Verhalten zu motivieren. Dabei fokusiert es sich auf die wichtigsten Aspekte und unterteilt diese in einzelne Schritte. Diese Schritte bauen aufeinander auf und sind untereinander abhängig. Das OSD wird in fünf Schritte unterteilt. Diese fünf Schritte können \autoref{img:gami_oct_strat} entnommen werden und werden im Folgenden näher erläutert.  \parencite[467\psqq]{Chou2015}
+Mit der Kenntnis der Motivationsfaktoren wird nun deren Anwendung näher erläutert. Benötigt wird hierfür ein \acrfull{gdf}. Es gibt beispielsweise das \acrfull{gmc}, das in acht Schritte unterteilt ist. Es baut auf dem \glqq MDA game design framework\grqq{} und \glqq Business Model Canvas\grqq{} auf. \parencite{Baldeon2016}
 
-Zu Beginn werden die genauen Ziele anhand von Business Metriken definiert. Diese Metriken sollten messbare, zählbare oder in einer anderen Weise quantifizierbare Werte sein. Sie sollen sich im Verlauf der Anwendung verbessern und werden im Nachgang mit ihren Ursprungswerten verglichen um die Effektivität der Kampagne zu evaluieren. Bei den Metriken ist ebenfalls darauf zu achten, dass diese nach Priorität sortiert sind um zuerst die wichtigsten Metriken  zu verbessern.
+In dieser Arbeit wird jedoch auf das \acrfull{osd} gesetzt, da dieses ebenfalls von YouKai Chou entwickelt wurde, um auf den acht Core Drives aufzubauen.  Das Ziel des \acrshort{osd} ist es herauszufinden, welche Gamification-Elemente eingesetzt werden müssen, um einen Menschen zu einem festgelegtem Verhalten zu motivieren. Dabei fokusiert es sich auf die wichtigsten Aspekte und unterteilt diese in einzelne Schritte. Diese Schritte bauen aufeinander auf und sind untereinander abhängig. Das \acrshort{osd}  wird in fünf Schritte unterteilt. Diese fünf Schritte können \autoref{img:gami_oct_strat} entnommen werden. \parencite[467\psqq]{Chou2015}
+
+Zu Beginn werden die genauen Ziele anhand von Business Metriken definiert. Diese Metriken sollten SMART sein. Sie sollen sich im Verlauf der Anwendung ändern und werden im Nachgang mit ihren Ursprungswerten verglichen um die Effektivität der Kampagne zu evaluieren. Bei den Metriken ist ebenfalls darauf zu achten, dass diese nach Priorität sortiert sind um zuerst die wichtigsten Metriken  zu verbessern.
 
 Im nächsten Schritt wird anhand der bereits in \autoref{chap:playertypes} erwähnten Spielertypen die Zielgruppe definiert. Hierbei ist darauf zu achten, dass diese durch ihre unterschiedlichen Motivationsfaktoren kategorisiert werden. Anderenfalls besteht die Gefahr, dass Gruppen definiert werden, welche unterschiedlich erscheinen, jedoch auf die gleiche Weise motiviert werden können. Um die Zielgruppe richtig zu definieren kann auch auf das Konzept der Personas zurückgegriffen werden \parencite{Nielsen2013}. 
 
@@ -638,11 +631,11 @@ Wurde eine Subscription gekauft, so wird dies im Chat besonders hervorgehoben, w
 
 \section{Stream Overlays}
 \label{chap:gami_overlays}
-Overlays sind seit Anbeginn von Twitch ein Kernbestandteil von Streams. Um Overlays erklären zu können muss zunächst erklärt werden, wie ein Stream produziert wird. Twitch ist eine sogenannte \glqq Crowdsourced Content\grqq{}-Plattform. Hierbei geht es darum, dass nicht Twitch selbst den Content für ihre Internetseite produziert sondern jeder die Möglichkeit hat einen Stream zu starten. Zum Streamen benötigt man einen Computer auf dem eine spezielle Streaming-Software installiert ist. Die bekannteste ist \glqq Open Broadcaster Software\grqq{}, im Folgenden kurz OBS. \parencite{Zhang2015}
+Overlays sind seit Anbeginn von Twitch ein Kernbestandteil von Streams. Um Overlays erklären zu können muss zunächst erklärt werden, wie ein Stream produziert wird. Twitch ist eine sogenannte \glqq Crowdsourced Content\grqq{}-Plattform. Hierbei geht es darum, dass nicht Twitch selbst den Content für ihre Internetseite produziert sondern jeder die Möglichkeit hat einen Stream zu starten. Zum Streamen benötigt man einen Computer auf dem eine spezielle Streaming-Software installiert ist. Die bekannteste ist \acrfull{obs}. \parencite{Zhang2015}
 
 Auch die modernen Videospielkonsolen Playstation 4 und Xbox One bieten mit integrierter Software die Möglichkeit zu Streamen. Diese werden jedoch in dieser Arbeit als nicht relevant definiert.
 
-OBS bietet die Möglichkeit in Echtzeit, Video- und Audiomaterial aus verschiedenen Quellen zu verschmelzen. Diese Quellen können zum Beispiel das Signal von Kameras und Mikrofonen sein. Auch virtuelle Quellen wie Bildschirmaufnahmen, Audio-, Bild- \& Videodateien und Texte können eingebunden werden. Die Quellen werden, wie in \autoref{img:obs_overlays} bildlich dargestellt, wie verschiedene Layer übereinandergelegt und ergeben ein gemeinsames Bild. Das entstandene Bild wird von OBS in ein vorgegebenes Format kodiert. Das fertige Material kann entweder als Videodatei auf der Festplatte abgespeichert werden oder über das \glqq Real Time Messaging Protocol\grqq{}, kurz RTMP, an einen Online Service wie Twitch geschickt werden. \parencite{Alam2018}
+\acrshort{obs} bietet die Möglichkeit in Echtzeit, Video- und Audiomaterial aus verschiedenen Quellen zu verschmelzen. Diese Quellen können zum Beispiel das Signal von Kameras und Mikrofonen sein. Auch virtuelle Quellen wie Bildschirmaufnahmen, Audio-, Bild- \& Videodateien und Texte können eingebunden werden. Die Quellen werden, wie in \autoref{img:obs_overlays} bildlich dargestellt, wie verschiedene Layer übereinandergelegt und ergeben ein gemeinsames Bild. Das entstandene Bild wird von \acrshort{obs} in ein vorgegebenes Format kodiert. Das fertige Material kann entweder als Videodatei auf der Festplatte abgespeichert werden oder über das \acrfull{rtmp}, an einen Online Service wie Twitch geschickt werden. \parencite{Alam2018}
 
 \begin{figure}[ht]
 \caption{Overlay Layers (eigene Darstellung)}
@@ -672,7 +665,7 @@ Alerts sind kurze Animationen die zusammen mit Hintergrundmusik sehr präsent im
 \includegraphics[width=\textwidth]{twitch_alert}
 \end{figure}
 
-Der Kreativität sind bei den Overlays keine Grenzen gesetzt. Alles was mit HTML, CSS und JavaScript implementiert werden kann, kann als Overlay dienen. Damit sich nicht jeder selbst seine Overlays programmieren muss, ist hierfür ein großer Markt an Dienstleistern entstanden. Die zwei bekanntesten sind StreamLabs und Streamelements. Auch Softwareanbieter die mit Videospiel-Streaming eng verknüpft sind, bieten Overlay-Dienste an. So hat Discord, der Anbieter einer Instant-Messaging und Voip-Plattform, das sogenannte Discord StreamKit. Damit können dynamische Elemente in den Stream eingebunden werden. Sie zeigen z.B. an, wie hoch die Nutzerzahlen gerade auf dem Server sind oder wer gerade in einem definierten Voip-Channel spricht.
+Der Kreativität sind bei den Overlays keine Grenzen gesetzt. Alles was mit HTML, CSS und JavaScript implementiert werden kann, kann als Overlay dienen. Damit sich nicht jeder selbst seine Overlays programmieren muss, ist hierfür ein großer Markt an Dienstleistern entstanden. Die zwei bekanntesten sind StreamLabs und Streamelements. Auch Softwareanbieter die mit Videospiel-Streaming eng verknüpft sind, bieten Overlay-Dienste an. So hat Discord, der Anbieter einer Instant-Messaging und Voip-Plattform, das sogenannte \glqq Discord StreamKit\grqq{}. Damit können dynamische Elemente in den Stream eingebunden werden. Sie zeigen z.B. an, wie hoch die Nutzerzahlen gerade auf dem Server sind oder wer gerade in einem definierten Voip-Channel spricht.
 
 
 \section{Chatbots}
@@ -735,7 +728,7 @@ Damit die Gamification Element auch in einer Kampagne mit definierten Zielen ver
 
 Für diese Arbeit wurden die Schnittstellen Drops, IRC Chat, PubSub und Twitch API analysiert. Drops können ausgeschlossen werden, da diese lediglich im Zusammenhang mit Videospielen Anwendung finden. Die Schnittstelle IRC Chat bietet die Möglichkeit Bots zu entwickeln und mit dem Chat zu interagieren. Hierbei können mit den Chat-Kommandos \glqq/mod\grqq{} und \glqq /vip\grqq{} die Mod oder VIP-Rollen vergeben und mit \glqq/unmod\grqq{} und \glqq /unvip\grqq{} wieder entfernt werden. 
 
-PubSub ist eine WebSocket Verbindung mit dem Twitch-Server. Diese Verbindung bietet die Möglichkeit sogenannte Topics zu abonnieren. Diese Topics sind unter anderem Subscriptions oder Cheers, die in einem definierten Channel aktiviert werden. Über die Websocket Verbindung schickt der Twitch-Server eine Nachricht an den verbundenen Client, sobald ein abonniertes Topic getriggert wird. Da diese Mechanik aber lediglich lesend ist können Gamification-Elemente nicht beeinflusst werden.
+PubSub ist eine WebSocket Verbindung mit dem Twitch-Server. Diese Verbindung bietet die Möglichkeit sogenannte \glqq Topics\grqq{} zu abonnieren. Diese Topics sind unter anderem Subscriptions oder Cheers, die in einem definierten Channel aktiviert werden. Über die Websocket Verbindung schickt der Twitch-Server eine Nachricht an den verbundenen Client, sobald ein abonniertes Topic getriggert wird. Da diese Mechanik aber lediglich lesend ist können Gamification-Elemente nicht beeinflusst werden.
 
 Die Analyse der Twitch API hat ergeben, dass über die Schnittstellen auf die Gamification-Elemente nur lesend zugegriffen werden kann. Daher ist die Twitch API in dieser Arbeit nicht anwendbar.
 
@@ -765,23 +758,23 @@ Online-Marketing ist ein sehr großes Feld und umfasst viele verschiedene Strate
 Aufgrund des Aufbaus und der Art und Weise wie Twitch funktioniert, werden nur bestimmte Formen des Online-Marketings dort angewandt. Diese sind Display-Marketing, Video-Marketing, Branded Content-Marketing, Affiliate-Marketing und Influencer-Marketing. Im Folgenden werden die verschiedenen Formen anhand von Beispielen erklärt. Danach wird bewertet und überprüft, wie diese mit Gamification kombiniert werden können.
 
 \section{Display-Marketing}
-Eine der ältesten Marketingmethoden im digitalen Bereich ist das Display-Marketing. Sie wird alternativ auch Banner-Werbung genannt. Hierbei werden auf einer Webseite verschiedene Banner eingeblendet, die über Produkte oder Firmen informieren. Diese Banner können in verschiedenen Formen und Größen auf einer Webseite eingebunden werden. Beispielsweise gibt es sogenannte Skyscraper, welche am rechten bzw. linken Bildschirmrand platziert sind. Oft werden Banner auch zwischen normalen Content einer Webseite angezeigt, um die Aufmerksamkeit der Betrachtenden in einem konzentrierten Moment auf ein Produkt zu lenken. Banner können auch unerwartet bildschirmfüllend erscheinen, in manchen Fällen sogar als eigenes Fenster oder Tab. Diese Art der Banner wird Pop-Ups genannt.\parencite{Xovi2019}
+Bei Display-Marketing werden auf einer Webseite verschiedene Banner eingeblendet, die über Produkte oder Firmen informieren. Aus diesem Grund wird diese Methode alternativ auch Banner-Werbung genannt. Diese Banner können in verschiedenen Formen und Größen auf einer Webseite eingebunden werden. Beispielsweise gibt es sogenannte \glqq Skyscraper\grqq{}, welche am rechten bzw. linken Bildschirmrand platziert sind. Oft werden Banner auch zwischen normalen Content einer Webseite angezeigt, um die Aufmerksamkeit der Betrachtenden in einem konzentrierten Moment auf ein Produkt zu lenken. Banner können auch unerwartet bildschirmfüllend erscheinen, in manchen Fällen sogar als eigenes Fenster oder Tab. Diese Art der Banner wird Pop-Ups genannt.\parencite{Xovi2019}
 
-Firmen können auf Twitch Banner-Werbung schalten, um Produkte zu bewerben oder ihren Livestream hervorzuheben. Diese Banner werden in vier verschiedenen Bereichen der Plattform angezeigt. Beginnend von links nach rechts in \autoref{img:banner_ads} ist die erste Variante, die als \glqq Medium Rectangle\grqq{} bezeichnet wird, ein mittelgroßer Banner für Produkte, welcher in der Explore Seite von Twitch zwischen den Kategorie-Kacheln angezeigt wird. Das \glqq Super Leaderboard\grqq{} wird ebenfalls für Produkte auf der Explore Seite angezeigt, jedoch am oberen Browser-Rand als langer horizontaler Balken. Auf der Startseite von Twitch wird als erstes Element das sogenannte \glqq Homepage Carousel\grqq{} angezeigt. In diesem werden Livestreams hervorgehoben. Die Kanäle die dort angezeigt werden, haben sich für die dritte Variante der Banner-Werbung entschieden. Die letzte Variante ist ein großer horizontaler Banner, welcher hinter dem Carousel angezeigt wird, um Produkte zu bewerben. \parencite{Twitch2020}
+Firmen können auf Twitch Banner-Werbung schalten, um Produkte zu bewerben oder ihren Livestream hervorzuheben. Diese Banner werden in vier verschiedenen Bereichen der Plattform angezeigt. Beginnend von links nach rechts in \autoref{img:banner_ads} ist die erste Variante, die als \glqq Medium Rectangle\grqq{} bezeichnet wird, ein mittelgroßer Banner für Produkte, welcher in der Explore Seite von Twitch zwischen den Kategorie-Kacheln angezeigt wird. Das \glqq Super Leaderboard\grqq{} wird ebenfalls für Produkte auf der Browse-Seite angezeigt, jedoch am oberen Browser-Rand als langer horizontaler Balken. Auf der Startseite von Twitch wird als erstes Element das sogenannte \glqq Homepage Carousel\grqq{} angezeigt. In diesem werden Livestreams hervorgehoben. Die Kanäle die dort angezeigt werden, haben sich für die dritte Variante der Banner-Werbung entschieden. Die letzte Variante ist ein großer horizontaler Banner, welcher hinter dem Carousel angezeigt wird, um Produkte zu bewerben. \parencite{Twitch2020}
 
 \begin{figure}[ht]
-\caption{Bannerplatzierung auf Twitch, Zusammengesetzte Screenshots aus \parencite{Twitcha}}
+\caption{Bannerplatzierung auf Twitch, Screenshots \parencite{Twitcha}}
 \label{img:banner_ads}
 \centering
 \includegraphics[width=\textwidth]{twitch_ads_banner}
 \end{figure}
 
 \section{Video-Marketing}
-Video-Marketing ist der Einsatz von audio-visuellen Inhalten in einer Marketingkampagne. Einfach betrachtet ist Video-Marketing das Erstellen und Platzieren eines Videos. Die Ziele dieser Videos können vielfältig sein und reichen vom Bewerben der Firma, anregen von Verkäufen, erhöhen der Bekanntheit einer Marke oder Dienstleistung bis hin zum Stärken der Kundenbindung.\parencite{Stringfellow2017}
+Video-Marketing ist der Einsatz von audio-visuellen Inhalten in einer Marketingkampagne. Einfach betrachtet ist Video-Marketing das Erstellen und Platzieren eines Videos. Die Ziele dieser Videos können vielfältig sein und reichen vom Bewerben der Firma, Anregen von Verkäufen, Erhöhen der Bekanntheit einer Marke oder Dienstleistung bis hin zum Stärken der Kundenbindung.\parencite{Stringfellow2017}
 
-Twitch als reine Video-Plattform hat Video-Marketing  als einen Kernbestandteil. Der Plattform wurde im Jahr 2019 der \glqq Best Video Marketing and Advertising Platform\grqq{} Award verliehen \parencite{DigidayAwards2019}. Hierbei wird klar ersichtlich wie viel Potential in Video-Marketing auf Twitch steckt.
+Twitch als reine Video-Plattform hat Video-Marketing  als einen Kernbestandteil. Der Plattform wurde im Jahr 2019 der \glqq Best Video Marketing and Advertising Platform\grqq{} Award verliehen \parencite{DigidayAwards2019}.
 
-Auf Twitch wird Video-Marketing zum einen in Form von kurzen Werbeclips im Videofeed des Streams eingesetzt. Hier werden diese zu verschiedenen Zeiten des Streams eingeblendet. Es wird zwischen pre-roll, mid-roll und post-roll Ads unterschieden. Dabei handelt es sich um klassische Werbevideos wie sie auch im Fernsehen zu sehen sind. Diese werden vor, während oder nach einem Livestream angezeigt. Wird beispielsweise auf einen Live-Channel geklickt, um dessen Stream beizutreten, wird automatisch ein Werbeclip gestartet. Wie in \autoref{img:preroll} zu sehen, wird oben rechts in der Ecke die noch verbleibende Dauer angezeigt und der Clip kann nicht übersprungen werden. 
+Auf Twitch wird Video-Marketing in Form von kurzen Werbeclips im Videofeed des Streams eingesetzt. Hier werden diese zu verschiedenen Zeiten des Streams eingeblendet. Es wird zwischen pre-roll, mid-roll und post-roll Ads unterschieden. Dabei handelt es sich um klassische Werbevideos wie sie auch im Fernsehen zu sehen sind. Diese werden vor, während oder nach einem Livestream angezeigt. Wird beispielsweise auf einen Live-Channel geklickt, um dessen Stream beizutreten, wird automatisch ein pre-roll Werbeclip gestartet. Wie in \autoref{img:preroll} zu sehen, wird oben rechts in der Ecke die noch verbleibende Dauer angezeigt und der Clip kann nicht übersprungen werden. 
 
 \begin{figure}[ht]
 \caption{Twitch Pre-Roll Ad; Screenshot von \parencite{LaraLoft2020}}
@@ -790,18 +783,19 @@ Auf Twitch wird Video-Marketing zum einen in Form von kurzen Werbeclips im Video
 \includegraphics[width=\textwidth]{twitch_video_preroll_edit}
 \end{figure}
 
-Bei den Mid-Roll Ads haben die Streamerinnen und Streamer die Möglichkeit den Zeitpunkt und die Dauer der Einblendung selbst zu bestimmen. Hierbei können sie zwischen 30, 60, 90, 120, 150 und 180 Sekunden wählen. Diese nutzen sie beispielsweise, um in möglichst spannenden Szenen des Streams die Aufmerksamkeit auf die Werbung zu lenken oder eine kurze Pause einzulegen. Diese Werbeclips werden im sogenannten Picture-By-Picture Modus angezeigt. Hierbei wird bei Aktivieren des Clips der Livestream verkleinert und im rechten Bildrand angezeigt, während die Werbung den ursprünglichen Platz des Streams einnimmt. \parencite{Twitch}
+Bei den mid-roll Werbeclips haben die Streamerinnen und Streamer die Möglichkeit den Zeitpunkt und die Dauer der Einblendung selbst zu bestimmen. Hierbei können sie zwischen 30, 60, 90, 120, 150 und 180 Sekunden wählen. Diese nutzen sie beispielsweise, um in möglichst spannenden Szenen des Streams die Aufmerksamkeit auf die Werbung zu lenken oder eine kurze Pause einzulegen. Diese Werbeclips werden im sogenannten \glqq Picture-By-Picture\grqq{} Modus angezeigt. Hierbei wird bei Aktivieren des Clips der Livestream verkleinert und im rechten Bildrand angezeigt, während die Werbung den ursprünglichen Platz des Streams einnimmt \parencite{Twitch}. Die post-roll Werbeclips werden nach Beendigung des Streams eingeblendet.
 
 \begin{figure}[ht]
-\caption{Twitch Video-Ads Varianten \parencite{Twitcha}}
+\caption{Twitch Video-Ads Varianten, Screenshots \parencite{Twitcha}}
 \label{img:twitch_vid_ads}
 \centering
 \includegraphics[width=\textwidth]{twitch_ads_video}
 \end{figure}
 
-Twitch bietet vier verschiedene Varianten an, mit denen Werbevideos an das Publikum ausgeliefert werden. Die Werbevideos werden im selben Bereich angezeigt wie auch der Livestream. Beginnend von links nach rechts in \autoref{img:twitch_vid_ads} ist die erste Variante die Ausspielung in der Smartphone-App von Twitch sowie in der Browser Version. Variante zwei und drei betrachtet die Ausspielung auf Mobile und in der App als separate Kanäle. So kann spezifischer auf eine Zielgruppe eingegangen werden. \parencite{Twitcha}
+Twitch bietet wie in \autoref{img:twitch_vid_ads} zu sehen drei verschiedene Varianten an, wo die Werbeclips bei den Konsumenten zu sehen sind. Werbende können sich für die gleichzeitige Ausspielung über die Desktop und Mobile Plattform entscheiden. Sie können sich aber auch gezielt für eine der beiden entscheiden, um dadurch spezifischer auf eine Zielgruppe einzugehen. \parencite{Twitcha} Die Werbevideos werden im selben Bereich angezeigt wie auch der Livestream.
 
-Jedoch werden die Ads nicht angezeigt, falls ein AdBlocker (dt. Werbeblocker) im Browser benutzt wird. Das ist eine Browser-Erweiterung, welche das Darstellen von Werbung verhindert. Für Subscriberinnen und Subscriber eines Channels oder für Twitch-Turbo Mitglieder, werden die Werbeclips auch übersprungen. Variante vier kann das Problem mit dem AdBlocker allerdings umgehen. Es handelt sich um eine neue Technologie mit dem Namen SureStream von Twitch, welche es der Plattform ermöglicht die Werbeclips direkt in das Videobild des Livestreams zu integrieren. Dadurch hat ein AdBlocker nicht mehr die Möglichkeit das Abspielen einer Werbung zu unterbinden. \parencite{Twitch2016}
+Jedoch werden die Werbevideos nicht angezeigt, falls ein AdBlocker (dt. Werbeblocker) im Browser benutzt wird. Das ist eine Browser-Erweiterung, welche das Darstellen von Werbung verhindert. Für Subscriberinnen und Subscriber eines Channels oder für Twitch-Turbo-Mitglieder, werden die Werbeclips auch übersprungen.
+Aus diesem Grund hat Twitch, wie in \autoref{img:twitch_vid_ads} zu sehen, eine neue Technologie mit dem Namen SureStream entwickelt, welche es der Plattform ermöglicht die Werbeclips direkt in das Videobild des Livestreams zu integrieren. Dadurch hat ein AdBlocker nicht mehr die Möglichkeit das Abspielen einer Werbung zu unterbinden. \parencite{Twitch2016}
 
 Zudem wird Video-Marketing auch ganz allgemein auf Twitch eingesetzt. Wie bereits eingangs beschrieben umfasst diese Marketingstrategie jegliche Art von audio-visuellem Content. Somit können auch die im folgenden erklärten Marketingstrategien in der Art und Weise wie sie auf Twitch Anwendung finden, unter dem Video-Marketing angesiedelt werden.
 
@@ -817,9 +811,9 @@ Auf Twitch startete beispielsweise die Firma Old Spice, ein Hersteller von Pfleg
 \includegraphics[width=\textwidth]{twitch_marketing_old_spice}
 \end{figure}
 
-Die Kampagne war wie ein virtuelles Rollenspiel aufgebaut. Der Mann war der Spieler-Charakter, welcher durch das Publikum gesteuert wurde. Im Wald, in dem sich der Mann bewegte, waren verschiedene Szenen aufgebaut. Zudem liefen auch Nicht-Spieler-Charaktere (NPC) umher, mit denen der Mann interagieren konnte. Einige dieser NPC waren als Tiere verkleidet, wodurch einige Szenen entstanden sind, in denen der Mann gegen einen Bären kämpfen musste (vgl. \autoref{img:oldspice}).
+Die Kampagne war wie ein virtuelles Rollenspiel aufgebaut. Der Mann war der Spieler-Charakter, welcher durch das Publikum gesteuert wurde. Im Wald, in dem sich der Mann bewegte, waren verschiedene Szenen aufgebaut. Zudem gab es in diesem Wald auch \acrfull{npc}, mit denen der Mann interagieren konnte. Einige dieser \acrshort{npc}s waren als Tiere verkleidet, wodurch einige Szenen entstanden sind, in denen der Mann gegen einen Bären kämpfen musste (vgl. \autoref{img:oldspice}).
 
-Insgesamt wurde die Werbekampagne von Old Spice als sehr erfolgreich eingestuft. Diese erreichte 2,56 Millionen Aufrufe und 29 Jahre an insgesamt angesehenem Video Material. Die exklusiv für diesen Stream freigeschaltenen Chat-Emotes wurden über 105.000 Mal verwendet.  \parencite{Workman2015}
+Die Werbekampagne von Old Spice erreichte 2,56 Millionen Aufrufe und 29 Jahre an insgesamt angesehenem Video Material. Die exklusiv für diesen Stream freigeschaltenen Chat-Emotes wurden über 105.000 Mal verwendet.  \parencite{Workman2015}
 
 \section{Affiliate-Marketing}
 Affiliate-Marketing ist ein provisionsbasierter Ansatz, um ein Produkt direkt an eine Zielgruppe zu bringen. Hierbei können sich Content Creator sogenannte \glqq Affiliate-Links\grqq{} generieren, welche direkt auf die Seite eines Produktes verweisen. In diesem Link ist ein Parameter gesetzt, welcher den Linkersteller eindeutig als solchen identifiziert, sozusagen eine Referenz zu diesem herstellt. Die Links werden deshalb auch \glqq Ref\grqq{}-Links bezeichnet. Sie werden in der Regel bei Produktreviews, Inventarlisten oder in Artikeln über die bestimmte Produktkategorie als Empfehlung eingesetzt. Klicken Interessierte nun auf einen solchen Link gelangen sie direkt auf die Seite des Produktes. Wird dieses Produkt daraufhin gekauft so wird eine Provision an den Linkersteller ausgezahlt, für die Kaufenden entstehen jedoch keine Mehrkosten. \parencite{Gallaugher2001}
@@ -835,7 +829,7 @@ Twitch bietet die Möglichkeit in der \glqq About\grqq{} -Sektion eines Profils 
 
 \section{Influencer-Marketing}
 
-Um zu verstehen was Influencer-Marketing bedeutet muss zunächst der Begriff Influencer erklärt werden. Influencerinnen und Influencer sind Personen, die aufgrund ihres Status und ihrer Reichweite in einer Nische einen signifikanten Einfluss auf die Kaufentscheidungen anderer Personen haben \parencite{Brown2008, InfluencerMarketingHub2017}. Sie werden von Firmen bezahlt um deren Produkte zu bewerben. Die Bewerbung der Produkte kann durch gesponserte Inhalte, Empfehlungen oder Produktplatzierungen geschehen. So stellen auf YouTube beispielsweise Firmen den Influencerinnen und Influencern verschiedene Produkte kostenlos zur Verfügung, damit sie diese in den Videos einsetzten, präsentieren oder als besonders gut darstellen. \parencite{Geyser2016}
+Um zu verstehen was Influencer-Marketing bedeutet muss zunächst der Begriff Influencer erklärt werden. Influencerinnen und Influencer sind Personen, die aufgrund ihres Status und ihrer Reichweite in einer Nische einen signifikanten Einfluss auf die Kaufentscheidungen anderer Personen haben \parencite{InfluencerMarketingHub2017}. Sie werden von Firmen bezahlt um deren Produkte zu bewerben. Die Bewerbung der Produkte kann durch gesponserte Inhalte, Empfehlungen oder Produktplatzierungen geschehen. Da das Publikum auf Twitch besonderen Wert auf Authentizität legt, ist bei der Auswahl der Streamerinnen und Streamer darauf zu achten, dass diese mit der Marke harmonieren. \parencite{Reachbird2020}
 
 \begin{figure}[ht]
 \caption{Alien Promotion von Lara Loft}
@@ -844,15 +838,15 @@ Um zu verstehen was Influencer-Marketing bedeutet muss zunächst der Begriff Inf
 \includegraphics[width=\textwidth]{twitch_laraloft_alien_promo_edit}
 \end{figure}
 
-Zum Start von \glqq Alien: Convenant\grqq{} im Jahr 2017 führte 20th Century Fox eine Kampagne auf Twitch durch. Diese bestand jedoch nicht aus dem Besprechen des Films oder dem gemeinsamen Schauen des Trailers im Stream, sondern aus der Inszinierung einer Alien-Invasion kurz vor Ende des Streams. Es wurde mit flackernden Lichtern, Bildstörungen oder auch wie in \autoref{img:laraloftalien} zu sehen mit CGI-Effekten wie (1) deutlichen Kratzern an der Wand und (2) einem Alienschwanz, der am Rande des Bildes vorbeistreift zuerst eine gruselige Atmosphäre geschaffen, um Spannung aufzubauen. Nachdem das Licht komplett ausfiel und die Streamerin aus der Kamera trat, um dieses wieder einzuschalten, sprang ein Alien direkt in die Kamera um die Zuschauer zu erschrecken. Daraufhin startet der Trailer zum neuen Film. Dieser erreichte somit mehr als eine halbe Millionen Aufrufe und die Kampagne war ein Erfolg. \parencite{T3N2018}
+Zum Start von \glqq Alien: Convenant\grqq{} im Jahr 2017 führte 20th Century Fox eine Kampagne auf Twitch durch. Diese bestand jedoch nicht aus dem Besprechen des Films oder dem gemeinsamen Schauen des Trailers im Stream, sondern aus der Inszinierung einer Alien-Invasion kurz vor Ende des Streams. Es wurde mit flackernden Lichtern, Bildstörungen oder auch wie in \autoref{img:laraloftalien} zu sehen mit CGI-Effekten wie (1) deutlichen Kratzern an der Wand und (2) einem Alienschwanz, der am Rande des Bildes vorbeistreift zuerst eine gruselige Atmosphäre geschaffen, um Spannung aufzubauen. Nachdem das Licht komplett ausfiel und die Streamerin aus der Kamera trat, um dieses wieder einzuschalten, sprang ein Alien direkt in die Kamera um die Zuschauer zu erschrecken. Daraufhin startet der Trailer zum neuen Film. Dieser erreichte mehr als eine halbe Millionen Aufrufe. \parencite{T3N2018}
 
-\section{Bewertung der einzelnen Marketingmethoden}
+\section{Bewertung bzgl. der Einsetzbarkeit von Gamification}
 \label{chap:bew_mark_meth}
 Für die Bewertung der einzelnen Marketingmethoden auf Twitch wurden diese im Detail über mehrere Monate beobachtet. Hierbei wurde festgestellt, dass die Banner des Display Marketings offensichtlich kaum noch eine Rolle spielen. Bei der Aktivierung eines AdBlockers werden diese zuverlässig ausgeblendet. War der AdBlocker jedoch deaktiviert, so war die Wahrscheinlichkeit, dass ein Banner angezeigt wurde, sehr gering. Während des Schreibens dieser Arbeit wurde gezielt auf die Benutzung eines AdBlockers verzichtet. Jedoch wurde im gesamten Zeitraum von drei Monaten nur einmal ein Banner im Header der Startseite angezeigt.  Deshalb werden Banner für diese Arbeit als nicht relevant definiert.
 
 Da bei Affiliate-Marketing durch einen Link auf die Seite eines Drittanbieters weitergeleitet wird, können die dortigen technischen Freiheiten genutzt werden. So könnte beim Kauf eines Produktes ein Event ausgelöst werden, welches die Overlays in einem Twitch Videobild beeinflusst. Somit bietet diese Marketingstrategie eine Möglichkeit Gamification-Elemente einzusetzen. 
 
-Video-Marketing ist für Unternehmen eine einfache und lukrative Methode. Die neue Technologie der SureStreams kann, wie beworben, auch von einem AdBlocker nicht umgangen werden. Die Gamification-Elemente der Plattform finden jedoch erst ihren Einsatz im Videobild des Streams. Somit können die Video-Ads auch als nicht relevant definiert werden. Allerdings ist Video-Marketing auf Twitch wie bereits beschrieben auch in Branded Content-Marketing und Influencer-Marketing implementiert. 
+Die neue Technologie der SureStreams kann, wie beworben, auch von einem AdBlocker nicht umgangen werden. Die Gamification-Elemente der Plattform finden jedoch erst ihren Einsatz im Videobild des Streams. Somit können die Video-Ads auch als nicht relevant definiert werden. Allerdings ist Video-Marketing auf Twitch wie bereits beschrieben auch in Branded Content-Marketing und Influencer-Marketing implementiert. 
 
 Als Resultat können drei mögliche Marketingstrategien definiert werden, die der \autoref{tab:mark_gami} entnommen werden können. Zum ersten Branded Content-Marketing in Form eines Livestreams auf dem Channel der Firma. Zweitens wenn Firmen Influencerinnen oder Influencer bezahlen um einen Livestream zu produzieren welcher auf deren Channels ausgestrahlt wird, möglicherweise auch in Form von Branded Content-Marketing. Drittens das Affiliate-Marketing mit den entsprechenden Links, die durch Aktionen wie Kaufen die Overlays beeinflussen. 
 
@@ -1009,7 +1003,7 @@ Beispielhaft wird für den Rest dieser Arbeit definiert, dass Video-Marketing ei
 \subsection{Gamification Konzept}
 \label{kap:gami_konzept}
 
-Für die Konzeption der Gamification in der Kampagne müssen die einzelnen Schritte des OSD aus \autoref{chap:des_fram} für jedes Ziel definiert werden. 
+Für die Konzeption der Gamification in der Kampagne müssen die einzelnen Schritte des \acrshort{osd} aus \autoref{chap:des_fram} für jedes Ziel definiert werden. 
 
 \begin{enumerate}
 \item Anzahl verkaufter Artikel + Anzahl Discord User
@@ -1021,7 +1015,7 @@ Für die Konzeption der Gamification in der Kampagne müssen die einzelnen Schri
 
 Als Metriken werden die Anzahl an verkaufter Merchandise-Arikeln und Discord-Usern definiert. Erhöht sich diese Zahl nach Durchführung der Kampagne, so waren die Maßnahmen erfolgreich.
 
-Da die Gamification-Elemente auf Twitch bereits seit Jahren erfolgreich eingesetzt werden, ist davon auszugehen, dass diese auf die Zuschauerschaft  von Twitch abgestimmt sind. In dieser Arbeit wird auf die gleichen Elemente zurückgegriffen, weshalb eine separate Betrachtung der Spielertypen nicht notwendig ist. Daher kann der zweite Schritt im OSD jeweils übersprungen werden.
+Da die Gamification-Elemente auf Twitch bereits seit Jahren erfolgreich eingesetzt werden, ist davon auszugehen, dass diese auf die Zuschauerschaft  von Twitch abgestimmt sind. In dieser Arbeit wird auf die gleichen Elemente zurückgegriffen, weshalb eine separate Betrachtung der Spielertypen nicht notwendig ist. Daher kann der zweite Schritt im \acrshort{osd} jeweils übersprungen werden.
 
 Die Desired-Actions sind der Kauf eines Artikels und das Beitreten eines Discord Servers.
 
@@ -1055,13 +1049,13 @@ Da mit jeder Aktion auch eine Chance besteht ein VIP-Badge zu erhalten haben die
 \section{Architekturkonzept}
 Das in der \autoref{img:archkonz} dargestellte Architekturkonzept besitzt einen zentralen Server als Herzstück der Anwendung. Auf diesem laufen sämtliche Informationen zusammen und werden in einer Datenbank gespeichert. Diese werden gebündelt über die Overlays und den TwitchIRC-Chat an die Zuschauer ausgegeben. 
 
-Als Streaming-Software wird OBS eingesetzt. Auf dem Server ist das Overlay über eine HTTP-Verbindung abrufbar. Es wird mit HTML, CSS und JavaScript entwickelt. Beim Start von OBS wird dieses vom Server abgerufen und als Layer über das Videobild gelegt. Zudem stellt dieses Overlay eine WebSocket-Verbindung zum Server her. 
+Als Streaming-Software wird \acrshort{obs} eingesetzt. Auf dem Server ist das Overlay über eine HTTP-Verbindung abrufbar. Es wird mit HTML, CSS und JavaScript entwickelt. Beim Start von \acrshort{obs} wird dieses vom Server abgerufen und als Layer über das Videobild gelegt. Zudem stellt dieses Overlay eine WebSocket-Verbindung zum Server her. 
 
 Das erste Ziel der Kampagne ist das Erhöhen der Nutzerzahlen auf dem Discord-Server. Da Discord eine Chat-Plattform ist, bietet es genauso wie Twitch die Möglichkeit Chatbots zu integrieren. Diese Bots können zum einen Unterhaltungen mitlesen, auf bestimmte Events wie das Beitreten von neuen Teilnehmerinnen und Teilnehmern reagieren und in den Chat schreiben. 
 
 Für das Lesen der Nutzerzahlen und das Beitreten eines Users wird somit ein Bot entwickelt, der auf diese Events reagieren kann. Sobald jemand dem Discord Server beitritt, bekommt der Bot dieses Event mitgeteilt. Der Bot benachrichtigt daraufhin den Server um im Overlay das Goal zu aktualisieren und ein Alert anzuzeigen.
 
-Für die Merchandise-Verkäufe wird ein Onlineshop eingerichtet. Auf diesem können sich die Zuschauerinnen und Zuschauer die im Stream beworbenen Produkte bestellen. Wird eine Bestellung abgeschlossen, so sendet das Backend des Shops eine Benachrichtigung an den Server. Dieser aktualisiert die Daten in der Datenbank und sendet über die WebSocket-Verbindung den Befehl zur Goal-Aktualisierung und Anzeige der Alerts an das Overlay in OBS. 
+Für die Merchandise-Verkäufe wird ein Onlineshop eingerichtet. Auf diesem können sich die Zuschauerinnen und Zuschauer die im Stream beworbenen Produkte bestellen. Wird eine Bestellung abgeschlossen, so sendet das Backend des Shops eine Benachrichtigung an den Server. Dieser aktualisiert die Daten in der Datenbank und sendet über die WebSocket-Verbindung den Befehl zur Goal-Aktualisierung und Anzeige der Alerts an das Overlay in \acrshort{obs}. 
 
 
 
@@ -1150,6 +1144,7 @@ In \autoref{chap:bots} wurde bereits erwähnt, dass Chatbots die Möglichkeit bi
 
 \cleardoublepage
 \phantomsection
+\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichnis]
 \addcontentsline{toc}{chapter}{Literatur}
 \printbibliography
 
